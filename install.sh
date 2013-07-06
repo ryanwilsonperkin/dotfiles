@@ -1,6 +1,9 @@
+INSTALL_DIR=~/.dotfiles
+
 for file in $(cat dotfiles)
 do
-	cp -ri ./$file ~/$file
+	[ -r ~/$file ] && mv ~/$file $INSTALL_DIR/old/$file
+	ln -s $INSTALL_DIR/$file ~/$file
 done
 unset file
 
