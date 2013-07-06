@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/ryan/waveapps/src/accounting/waveaccounting'
+let g:netrw_dirhist_2='/Users/ryan/waveapps/src/accounting'
+let g:netrw_dirhist_3='/Users/ryan/waveapps/src'
+let g:netrw_dirhist_4='/Users/ryan/waveapps'
+let g:netrw_dirhist_5='/Users/ryan'
+let g:netrw_dirhist_6='/Users/ryan/waveapps/src/accounting/waveaccounting/invoices'
+let g:netrw_dirhist_7='/Users/ryan'
+let g:netrw_dirhist_8='/Users/ryan/.vim'
+let g:netrw_dirhist_9='/Users/ryan/.vim/ftplugin'
