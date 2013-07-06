@@ -42,6 +42,9 @@ alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 # Empty the Trash on all mounted volumes
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash"
 
+# Read the bash manual
+alias rtfm="open /usr/share/doc/bash/bashref.pdf"
+
 # Hide/show hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
@@ -64,4 +67,4 @@ for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 done
 
 alias mute="osascript -e 'set volume output muted true'"
-alias getloud="osascript -e 'set volume 7'"
+alias pumpit="osascript -e 'set volume 7'"

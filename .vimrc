@@ -1,8 +1,11 @@
+" Make Vim more useful
+set nocompatible
+
 " Syntax highlighting               
 syntax on
 
-" Make Vim more useful
-set nocompatible
+" Set 256 bit color mode
+set t_Co=256
 
 " Use the OS clipboard by default
 set clipboard=unnamed

@@ -1,7 +1,3 @@
-export EDITOR=/usr/bin/vim
-export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
-
 # Source dotfiles
 for file in ~/.bash_{prompt,exports,aliases,functions}; do
 	[ -r "$file" ] && source "$file"
