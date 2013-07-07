@@ -1,8 +1,13 @@
 # Source dotfiles
-for file in ~/.bash_{prompt,exports,aliases,functions}; do
+for file in ~/.bash_{exports,aliases,functions}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
+
+# Add liquid prompt https://github.com/nojhan/liquidprompt
+if [ -f $(brew --prefix)/bin/liquidprompt ]; then
+	. $(brew --prefix)/bin/liquidprompt
+fi
 
 # Load RVM into a shell session *as a function*
 [ -r "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm" 
