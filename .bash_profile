@@ -4,10 +4,8 @@ for file in ~/.bash_{exports,aliases,functions}; do
 done
 unset file
 
-# Add liquid prompt https://github.com/nojhan/liquidprompt
-if [ -f $(brew --prefix)/bin/liquidprompt ]; then
-	. $(brew --prefix)/bin/liquidprompt
-fi
+# Add liquid prompt https://github.com/nojhan/liquidprompt	
+command -v liquidprompt > /dev/null 2>&1 && . liquidprompt
 
 # Load RVM into a shell session *as a function*
 [ -r "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm" 
