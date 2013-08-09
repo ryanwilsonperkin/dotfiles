@@ -68,3 +68,18 @@ done
 
 alias mute="osascript -e 'set volume output muted true'"
 alias pumpit="osascript -e 'set volume 7'"
+
+# Invoke the installed terminal-notifier app
+alias terminal-notify='/Applications/Utilities/terminal-notifier.app/Contents/MacOS/terminal-notifier'
+
+# Fix broken webcam
+alias fixwebcam='sudo killall VDCAssistant'
+
+# Get default gateway IP address
+alias routerip="netstat -rn | grep default | awk \'{print $2}\'"
+
+# Remove pyc files
+alias rmpyc='find . -type f -name "*.pyc" -print -delete'
+
+# Sleep
+alias macsleep='pmset sleepnow'

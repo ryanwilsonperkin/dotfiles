@@ -1,3 +1,6 @@
+" Set colorscheme
+colorscheme molokai
+
 " Make Vim more useful
 set nocompatible
 
@@ -55,9 +58,6 @@ set shortmess=atI
 " Show the current mode
 set showmode
 
-" Show the filename in the window titlebar
-set title
-
 " Show the command as it's typed
 set showcmd
 
@@ -79,6 +79,15 @@ set backupdir=~/.vim/backups
 " Set swapfile directory
 set directory=~/.vim/swaps
 
+" Turn off warning messages switching between buffers
+set hidden
+
+" Search upwards recursively for a tags folder
+set tags=tags;/
+
+" Blink cursor instead of stupid bell
+set vb
+
 " Set undo directory
 if exists("&undodir")
 	set undodir=~/.vim/undo
@@ -90,21 +99,27 @@ filetype plugin indent on
 
 " Keymappings
 " ===========
-let mapleader = ","
+let mapleader = ";"
 
-" View buffer (,b)
+" View buffer (;b)
 noremap <leader>b :ls<CR>:b
 
-" Toggle NERDTree (,n)
+" Toggle NERDTree (;n)
 noremap <leader>n :NERDTreeToggle<CR>
 
 " Toggle code fold ( )
 noremap <space> za
 
-" Expand all code folds (, )
+" Expand all code folds (; )
 noremap <leader><space> zR
 
-" Save a file as root (,W)
+" Save a file as root (;W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+" Switch between buffers quickly
+noremap <leader>h :bp<CR>
+noremap <leader>l :bn<CR>
+
+" Toggle the tagbar
+noremap <leader>t :TagbarToggle<CR>
 
