@@ -44,5 +44,5 @@ plugins=(brew git gitfast pip screen vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
-. liquidprompt
+command -v liquidprompt > /dev/null 2>&1 && . liquidprompt
 
