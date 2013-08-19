@@ -88,6 +88,9 @@ set tags=tags;/
 " Blink cursor instead of stupid bell
 set vb
 
+" Don't auto fold on file open
+set foldlevelstart=99
+
 " Set undo directory
 if exists("&undodir")
 	set undodir=~/.vim/undo
@@ -97,6 +100,13 @@ endif
 execute pathogen#infect()
 filetype plugin indent on
 
+" Set file types
+au BufNewFile,BufRead *.less set filetype=less
+
+" Disable autosave prompt
+:let g:session_autoload = 'yes'
+:let g:session_autosave = 'yes'
+
 " Keymappings
 " ===========
 let mapleader = ";"
@@ -105,13 +115,10 @@ let mapleader = ";"
 noremap <leader>b :ls<CR>:b
 
 " Toggle NERDTree (;n)
-noremap <leader>n :NERDTreeToggle<CR>
+noremap <leader><space> :NERDTreeToggle<CR>
 
 " Toggle code fold ( )
 noremap <space> za
-
-" Expand all code folds (; )
-noremap <leader><space> zR
 
 " Save a file as root (;W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>

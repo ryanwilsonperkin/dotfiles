@@ -65,11 +65,11 @@ LP_ENABLE_JOBS=1
 
 # Do you want to use the load feature ?
 # Recommended value is 1
-LP_ENABLE_LOAD=1
+LP_ENABLE_LOAD=0
 
 # Do you want to use the batt feature ?
 # Recommended value is 1
-LP_ENABLE_BATT=1
+LP_ENABLE_BATT=0
 
 # Do you want to use vcs features with root account
 # Recommended value is 0
