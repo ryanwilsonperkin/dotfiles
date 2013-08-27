@@ -102,6 +102,7 @@ filetype plugin indent on
 
 " Set file types
 au BufNewFile,BufRead *.less set filetype=less
+au BufNewFile,BufRead *.md set filetype=markdown
 
 " Disable autosave prompt
 :let g:session_autoload = 'yes'
