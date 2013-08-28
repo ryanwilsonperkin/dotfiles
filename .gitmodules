@@ -1,3 +1,24 @@
 [submodule "dotfiles/.vim/bundle/jedi-vim"]
 	path = dotfiles/.vim/bundle/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "dotfiles/.vim/bundle/vim-powerline"]
+	path = dotfiles/.vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "dotfiles/.vim/bundle/minibufexpl.vim"]
+	path = dotfiles/.vim/bundle/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "dotfiles/.vim/bundle/vim-misc"]
+	path = dotfiles/.vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
+[submodule "dotfiles/.vim/bundle/syntastic"]
+	path = dotfiles/.vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "dotfiles/.vim/bundle/nerdtree"]
+	path = dotfiles/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "dotfiles/.vim/bundle/vim-session"]
+	path = dotfiles/.vim/bundle/vim-session
+	url = https://github.com/xolox/vim-session.git
+[submodule "dotfiles/.vim/bundle/tagbar"]
+	path = dotfiles/.vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
