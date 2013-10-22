@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/usr/local/bin'
-let g:netrw_dirhist_2='/Users/ryan/.oh-my-zsh'
-let g:netrw_dirhist_3='/Users/ryan/.oh-my-zsh/lib'
-let g:netrw_dirhist_4='/Users/ryan/.oh-my-zsh/plugins'
-let g:netrw_dirhist_5='/Users/ryan/.dotfiles/.vim/bundle/minibufexpl.vim'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/ryan/School/.git'
+let g:netrw_dirhist_2='/Users/ryan/Projects/gcc/bootstrap-presentation/my-first-site'
+let g:netrw_dirhist_3='/Users/ryan/Projects/uog-site'
+let g:netrw_dirhist_4='/Users/ryan/Projects/uog-site/_layouts'
+let g:netrw_dirhist_5='/Users/ryan/Projects/uog-site/workterms'
+let g:netrw_dirhist_6='/Users/ryan/Projects/uog-site/contact'
+let g:netrw_dirhist_7='/Users/ryan/Projects/uog-site/_layouts'
