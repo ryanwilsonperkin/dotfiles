@@ -34,3 +34,6 @@
 [submodule "vim/.vim/bundle/vim-liquid"]
 	path = vim/.vim/bundle/vim-liquid
 	url = https://github.com/tpope/vim-liquid.git
+[submodule "vim/.vim/bundle/vim-rake"]
+	path = vim/.vim/bundle/vim-rake
+	url = https://github.com/tpope/vim-rake.git
