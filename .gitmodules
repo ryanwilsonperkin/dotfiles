@@ -37,3 +37,6 @@
 [submodule "vim/.vim/bundle/vim-rake"]
 	path = vim/.vim/bundle/vim-rake
 	url = https://github.com/tpope/vim-rake.git
+[submodule "vim/.vim/bundle/ctrlp"]
+	path = vim/.vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git

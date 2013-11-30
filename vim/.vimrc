@@ -127,6 +127,7 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Switch between buffers quickly
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
+noremap <leader>q :bd<CR>
 
 " Toggle the tagbar
 noremap <leader>t :TagbarToggle<CR>
