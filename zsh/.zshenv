@@ -1,2 +1,2 @@
 typeset -U path
-path=(/usr/local/bin /usr/local/sbin ~/.rvm/bin $path)
+path=(/usr/local/bin /usr/local/sbin ~/.rvm/bin ~/.liquidprompt $path)

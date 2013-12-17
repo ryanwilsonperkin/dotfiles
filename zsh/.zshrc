@@ -44,7 +44,7 @@ DISABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew git gitfast pip screen vagrant)
 
-source $ZSH/oh-my-zsh.sh
+[ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -e .zsh_functions ] && source $HOME/.zsh_functions
 
 command -v liquidprompt > /dev/null 2>&1 && . liquidprompt
