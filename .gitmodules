@@ -40,3 +40,6 @@
 [submodule "vim/.vim/bundle/ctrlp"]
 	path = vim/.vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "liquidprompt/.liquidprompt"]
+	path = liquidprompt/.liquidprompt
+	url = git@github.com:nojhan/liquidprompt.git
