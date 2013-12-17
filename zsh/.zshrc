@@ -49,8 +49,5 @@ source $ZSH/oh-my-zsh.sh
 
 command -v liquidprompt > /dev/null 2>&1 && . liquidprompt
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
