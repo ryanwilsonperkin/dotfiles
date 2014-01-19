@@ -1,5 +1,6 @@
 " Set colorscheme
-colorscheme molokai
+set background=dark
+colorscheme solarized 
 
 " Make Vim more useful
 set nocompatible
