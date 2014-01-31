@@ -128,7 +128,7 @@ filetype plugin indent on " Required for Vundle
 let mapleader = ";"
 
 " View buffer (;b)
-noremap <leader>b :ls<CR>:b
+noremap <leader>b :BufExplorer<CR>
 
 " Toggle NERDTree (;n)
 noremap <leader><space> :NERDTreeToggle<CR>
