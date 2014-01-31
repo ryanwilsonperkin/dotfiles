@@ -1,9 +1,12 @@
+" General configuration
+" =====================
+
 " Set colorscheme
 set background=dark
 colorscheme solarized 
 let g:Powerline_symbols = 'fancy'
 
-" Make Vim more useful
+" Force ViM mode (loses backwards compatibility with Vi) 
 set nocompatible
 
 " Syntax highlighting               
@@ -26,9 +29,6 @@ set backspace=indent,eol,start
 
 " Optimize for fast terminal connections
 set ttyfast
-
-" Add the g flag to search/replace by default
-set gdefault
 
 " Use UTF-8 without BOM
 set encoding=utf-8 nobomb
@@ -69,17 +69,14 @@ set laststatus=2
 " Disable error bells
 set noerrorbells
 
+" Blink cursor instead of stupid bell
+set vb
+
 " Don't reset cursor to start of line when moving around
 set nostartofline
 
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
-
-" Set backup directory
-set backupdir=~/.vim/backups
-
-" Set swapfile directory
-set directory=~/.vim/swaps
 
 " Turn off warning messages switching between buffers
 set hidden
@@ -87,28 +84,44 @@ set hidden
 " Search upwards recursively for a tags folder
 set tags=tags;/
 
-" Blink cursor instead of stupid bell
-set vb
-
 " Don't auto fold on file open
 set foldlevelstart=99
+
+" Disable autosave prompt
+:let g:session_autosave = 'yes'
+
+" Set backup directory
+set backupdir=~/.vim/backups
+
+" Set swapfile directory
+set directory=~/.vim/swaps
 
 " Set undo directory
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
-" Include pathogen
-execute pathogen#infect()
-filetype plugin indent on
+" Bundle https://github.com/gmarik/vundle
+" ======================================= 
+filetype off " Required for Vundle
 
-" Set file types
-au BufNewFile,BufRead *.less set filetype=less
-au BufNewFile,BufRead *.md set filetype=markdown
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" Disable autosave prompt
-:let g:session_autoload = 'yes'
-:let g:session_autosave = 'yes'
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+Bundle 'jlanzarotta/bufexplorer'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'groenewege/vim-less'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-rake'
+
+filetype plugin indent on " Required for Vundle
 
 " Keymappings
 " ===========
@@ -133,4 +146,9 @@ noremap <leader>q :bd<CR>
 
 " Toggle the tagbar
 noremap <leader>t :TagbarToggle<CR>
+
+" File types
+" ==============
+au BufNewFile,BufRead *.less set filetype=less
+au BufNewFile,BufRead *.md set filetype=markdown
 
