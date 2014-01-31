@@ -1,6 +1,7 @@
 " Set colorscheme
 set background=dark
 colorscheme solarized 
+let g:Powerline_symbols = 'fancy'
 
 " Make Vim more useful
 set nocompatible
