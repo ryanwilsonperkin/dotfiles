@@ -1,5 +1,5 @@
-setlocal expandtab
-setlocal shiftwidth=4
-setlocal tabstop=4
-setlocal foldmethod=indent
-setlocal foldnestmax=2
+set expandtab
+set shiftwidth=4
+set smartindent
+set smarttab
+set tabstop=4
