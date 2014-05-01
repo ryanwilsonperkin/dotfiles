@@ -1,5 +1,6 @@
-setlocal expandtab
-setlocal shiftwidth=4
 setlocal tabstop=4
-setlocal foldmethod=indent
-setlocal foldnestmax=2
+setlocal softtabstop=4
+setlocal shiftwidth=4
+setlocal textwidth=80
+setlocal smarttab
+setlocal expandtab
