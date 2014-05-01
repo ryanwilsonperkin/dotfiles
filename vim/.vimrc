@@ -4,7 +4,9 @@
 " Set colorscheme
 set background=dark
 colorscheme solarized 
-let g:Powerline_symbols = 'fancy'
+
+" Powerline configuration
+set rtp+=~/.powerline/powerline/bindings/vim
 
 " Force ViM mode (loses backwards compatibility with Vi) 
 set nocompatible
@@ -115,10 +117,10 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-rake'
 
 filetype plugin indent on " Required for Vundle
