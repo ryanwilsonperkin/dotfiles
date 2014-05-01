@@ -122,6 +122,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-rake'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on " Required for Vundle
 
