@@ -8,6 +8,7 @@ colorscheme solarized
 " Powerline configuration
 set rtp+=~/.powerline/powerline/bindings/vim
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_confirm_extra_conf = 0
 
 " Force ViM mode (loses backwards compatibility with Vi) 
 set nocompatible
@@ -150,6 +151,9 @@ noremap <leader>q :bd<CR>
 
 " Toggle the tagbar
 noremap <leader>t :TagbarToggle<CR>
+
+" Shortcuts for YCM
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " File types
 " ==============
