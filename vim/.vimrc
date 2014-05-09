@@ -147,16 +147,10 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Switch between buffers quickly
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
-noremap <leader>q :bd<CR>
+noremap <leader>q :bp\|bd #<CR>
 
 " Toggle the tagbar
 noremap <leader>t :TagbarToggle<CR>
 
 " Shortcuts for YCM
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
-
-" File types
-" ==============
-au BufNewFile,BufRead *.less set filetype=less
-au BufNewFile,BufRead *.md set filetype=markdown
-
