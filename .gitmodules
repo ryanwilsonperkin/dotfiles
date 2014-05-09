@@ -10,6 +10,10 @@
 	path = vim/.vim/bundle/vundle
 	url = http://github.com/gmarik/vundle.git
 	branch = master
+[submodule "tmux/.tmux/tmux-powerline"]
+	path = tmux/.tmux/tmux-powerline
+	url = git@github.com:erikw/tmux-powerline.git
+	branch = master
 [submodule "powerline/.powerline"]
 	path = powerline/.powerline
 	url = git@github.com:Lokaltog/powerline.git
