@@ -50,3 +50,6 @@ plugins=(brew git gitfast pip screen vagrant)
 
 # Vi mode for zsh
 bindkey -v
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^r' history-incremental-search-backward
