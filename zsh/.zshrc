@@ -47,3 +47,6 @@ plugins=(brew git gitfast pip screen vagrant)
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -e .zsh_functions ] && source $HOME/.zsh_functions
 [ -e ~/.powerline/powerline/bindings/zsh/powerline.zsh ] && source ~/.powerline/powerline/bindings/zsh/powerline.zsh
+
+# Vi mode for zsh
+bindkey -v
