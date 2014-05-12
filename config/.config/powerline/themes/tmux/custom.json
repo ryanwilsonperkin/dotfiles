@@ -8,17 +8,9 @@
 	"segments": {
 		"right": [
 			{
-				"name": "uptime",
-				"priority": 50
-			},
-			{
-				"name": "system_load",
-				"priority": 50
-			},
-			{
 				"name": "date",
                 "args": {
-                    "format": "%A %d/%m/%y"
+                    "format": "%a %d/%m/%y"
                 }
 			},
 			{
@@ -27,9 +19,6 @@
 					"format": "%H:%M",
 					"istime": true
 				}
-			},
-			{
-				"name": "hostname"
 			}
 		]
 	}
