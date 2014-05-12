@@ -46,5 +46,4 @@ plugins=(brew git gitfast pip screen vagrant)
 
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -e .zsh_functions ] && source $HOME/.zsh_functions
-
-command -v liquidprompt > /dev/null 2>&1 && . liquidprompt
+[ -e ~/.powerline/powerline/bindings/zsh/powerline.zsh ] && source ~/.powerline/powerline/bindings/zsh/powerline.zsh
