@@ -107,6 +107,9 @@ if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
+" Set tags file as .tags
+set tags=.tags
+
 " Bundle https://github.com/gmarik/vundle
 " ======================================= 
 filetype off " Required for Vundle
