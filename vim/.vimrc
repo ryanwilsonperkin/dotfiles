@@ -130,15 +130,13 @@ Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-rake'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on " Required for Vundle
 
 " Keymappings
 " ===========
 let mapleader = ";"
-
-" View buffer (;b)
-noremap <leader>b :BufExplorer<CR>
 
 " Toggle NERDTree (;n)
 noremap <leader><space> :NERDTreeToggle<CR>
