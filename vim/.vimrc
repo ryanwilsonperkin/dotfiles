@@ -96,6 +96,9 @@ set foldlevelstart=99
 " Disable autosave prompt
 let g:session_autosave = 'yes'
 
+" Set the delay after hitting escape to 100ms
+set timeoutlen=100
+
 " Set backup directory
 set backupdir=~/.vim/backups
 
