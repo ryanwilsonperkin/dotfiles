@@ -94,7 +94,7 @@ set tags=tags;/
 set foldlevelstart=99
 
 " Disable autosave prompt
-:let g:session_autosave = 'yes'
+let g:session_autosave = 'yes'
 
 " Set backup directory
 set backupdir=~/.vim/backups
