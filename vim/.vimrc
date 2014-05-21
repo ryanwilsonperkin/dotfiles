@@ -100,6 +100,9 @@ let g:session_autosave = 'yes'
 set ttimeout
 set ttimeoutlen=100
 
+" Allow mouse support for those rare cases
+set mouse=a
+
 " Set backup directory
 set backupdir=~/.vim/backups
 
