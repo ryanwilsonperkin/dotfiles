@@ -44,3 +44,4 @@ Thumbs.db
 # Tool Configuration Files #
 ############################
 .ackrc
+.tags
