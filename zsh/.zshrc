@@ -42,11 +42,12 @@ DISABLE_CORRECTION="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew git gitfast pip screen tmux vagrant)
+plugins=(brew git gitfast pip screen tmux vagrant rvm)
 
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -e .zsh_functions ] && source $HOME/.zsh_functions
 [ -e ~/.powerline/powerline/bindings/zsh/powerline.zsh ] && source ~/.powerline/powerline/bindings/zsh/powerline.zsh
+[ -e $HOME/.rvm ] && export PATH="$PATH:$HOME/.rvm/bin" 
 
 # Vi mode for zsh
 bindkey -v
