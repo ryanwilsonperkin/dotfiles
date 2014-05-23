@@ -45,7 +45,6 @@ DISABLE_CORRECTION="true"
 plugins=(brew git gitfast pip screen tmux vagrant rvm)
 
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-[ -e .zsh_functions ] && source $HOME/.zsh_functions
 [ -e $HOME/.powerline/powerline/bindings/zsh/powerline.zsh ] && source ~/.powerline/powerline/bindings/zsh/powerline.zsh
 [ -e $HOME/.rvm ] && export PATH="$PATH:$HOME/.rvm/bin" 
 
