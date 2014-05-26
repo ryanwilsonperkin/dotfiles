@@ -45,8 +45,8 @@ DISABLE_CORRECTION="true"
 plugins=(brew git gitfast pip rvm screen tmux vagrant)
 
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-[ -e $HOME/.powerline/powerline/bindings/zsh/powerline.zsh ] && source ~/.powerline/powerline/bindings/zsh/powerline.zsh
-[ -e $HOME/.rvm ] && export PATH="$PATH:$HOME/.rvm/bin" 
+[ -e $HOME/.powerline/powerline/bindings/zsh/powerline.zsh ] && source $HOME/.powerline/powerline/bindings/zsh/powerline.zsh
+[ -e $HOME/.rvm ] && source $HOME/.rvm/scripts/rvm 
 
 # Vi mode for zsh
 bindkey -v
