@@ -53,3 +53,6 @@ bindkey -v
 bindkey '^P' up-history
 bindkey '^N' down-history
 bindkey '^r' history-incremental-search-backward
+
+# Always use vim as our editor
+export EDITOR=vim
