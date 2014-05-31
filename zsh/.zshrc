@@ -56,3 +56,6 @@ bindkey '^r' history-incremental-search-backward
 
 # Always use vim as our editor
 export EDITOR=vim
+
+# Virtualenv prompt is already handled by powerline.
+export VIRTUAL_ENV_DISABLE_PROMPT=1
