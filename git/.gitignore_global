@@ -39,7 +39,6 @@ Thumbs.db
 # IDE Configuration Files #
 ###########################
 .idea
-.ycm_extra_conf.py
 
 # Tool Configuration Files #
 ############################

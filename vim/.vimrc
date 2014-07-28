@@ -7,8 +7,6 @@ colorscheme solarized
 
 " Powerline configuration
 set rtp+=~/.powerline/powerline/bindings/vim
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_confirm_extra_conf = 0
 
 " Force ViM mode (loses backwards compatibility with Vi) 
 set nocompatible
@@ -136,7 +134,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-rake'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on " Required for Vundle
@@ -161,9 +158,6 @@ noremap <leader>q :bp\|bd #<CR>
 
 " Toggle the tagbar
 noremap <leader>t :TagbarToggle<CR>
-
-" Shortcuts for YCM
-nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " Move by visible not literal line
 nnoremap j gj
