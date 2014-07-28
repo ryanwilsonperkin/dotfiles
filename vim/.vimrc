@@ -164,3 +164,7 @@ noremap <leader>t :TagbarToggle<CR>
 
 " Shortcuts for YCM
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+
+" Move by visible not literal line
+nnoremap j gj
+nnoremap k gk
