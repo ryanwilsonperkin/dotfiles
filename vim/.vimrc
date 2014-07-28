@@ -5,9 +5,6 @@
 set background=dark
 colorscheme solarized 
 
-" Powerline configuration
-set rtp+=~/.powerline/powerline/bindings/vim
-
 " Force ViM mode (loses backwards compatibility with Vi) 
 set nocompatible
 

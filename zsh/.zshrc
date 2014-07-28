@@ -45,7 +45,6 @@ DISABLE_CORRECTION="true"
 plugins=(brew git gitfast pip rvm screen tmux vagrant)
 
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-[ -e $HOME/.powerline/powerline/bindings/zsh/powerline.zsh ] && source $HOME/.powerline/powerline/bindings/zsh/powerline.zsh
 [ -e $HOME/.rvm ] && source $HOME/.rvm/scripts/rvm 
 
 # Vi mode for zsh
@@ -56,6 +55,3 @@ bindkey '^r' history-incremental-search-backward
 
 # Always use vim as our editor
 export EDITOR=vim
-
-# Virtualenv prompt is already handled by powerline.
-export VIRTUAL_ENV_DISABLE_PROMPT=1
