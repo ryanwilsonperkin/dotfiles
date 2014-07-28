@@ -1,7 +1,7 @@
 TERM=xterm-256color
 
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.zsh/oh-my-zsh
 
 # Name of the oh-my-zsh theme.
 ZSH_THEME="blinks"
