@@ -120,7 +120,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
