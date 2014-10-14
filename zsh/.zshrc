@@ -11,7 +11,7 @@ ZSH_THEME="blinks-custom"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
-plugins=(brew git gitfast pip rvm screen tmux vagrant)
+plugins=(git gitfast pip rvm tmux vagrant)
 
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 [ -e $HOME/.rvm ] && source $HOME/.rvm/scripts/rvm 
