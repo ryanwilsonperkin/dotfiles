@@ -135,6 +135,9 @@ Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on " Required for Vundle
 
+" NERDTree customization
+let NERDTreeIgnore = ['\.pyc$']
+
 " Keymappings
 " ===========
 let mapleader = ";"
