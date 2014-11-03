@@ -132,6 +132,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-rake'
 Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/closetag.vim'
 
 filetype plugin indent on " Required for Vundle
 
