@@ -1,5 +1,3 @@
-TERM=xterm-256color
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.zsh/oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh/custom
