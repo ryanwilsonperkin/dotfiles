@@ -1,10 +1,6 @@
 " General configuration
 " =====================
 
-" Set colorscheme
-set background=dark
-colorscheme solarized 
-
 " Force ViM mode (loses backwards compatibility with Vi) 
 set nocompatible
 
@@ -116,24 +112,26 @@ set tags=.tags
 " ======================================= 
 filetype off " Required for Vundle
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-Bundle 'gmarik/Vundle.vim'
+" Let Vundle manage itself.
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'jlanzarotta/bufexplorer'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-rake'
-Bundle 'mileszs/ack.vim'
-Bundle 'vim-scripts/closetag.vim'
+" Plugins
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'jlanzarotta/bufexplorer'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-rake'
+Plugin 'mileszs/ack.vim'
+Plugin 'vim-scripts/closetag.vim'
 
+call vundle#end()
 filetype plugin indent on " Required for Vundle
 
 " NERDTree customization
