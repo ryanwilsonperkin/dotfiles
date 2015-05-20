@@ -131,8 +131,16 @@ Plugin 'tpope/vim-rake'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/closetag.vim'
 
+" Colour schemes
+Plugin 'altercation/vim-colors-solarized'
+
 call vundle#end()
 filetype plugin indent on " Required for Vundle
+
+" Set colour scheme
+syntax enable
+set background=dark
+colorscheme solarized
 
 " NERDTree customization
 let NERDTreeIgnore = ['\.pyc$']
