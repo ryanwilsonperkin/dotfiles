@@ -131,6 +131,7 @@ Plugin 'tpope/vim-rake'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/closetag.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'nvie/vim-flake8'
 
 " Colour schemes
 Plugin 'altercation/vim-colors-solarized'
