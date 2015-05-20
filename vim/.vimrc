@@ -130,6 +130,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-rake'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/closetag.vim'
+Plugin 'davidhalter/jedi-vim'
 
 " Colour schemes
 Plugin 'altercation/vim-colors-solarized'
