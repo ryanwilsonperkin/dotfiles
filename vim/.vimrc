@@ -132,6 +132,9 @@ Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/closetag.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'elzr/vim-json'
+Plugin 'bling/vim-airline'
 
 " Colour schemes
 Plugin 'altercation/vim-colors-solarized'
@@ -143,6 +146,9 @@ filetype plugin indent on " Required for Vundle
 syntax enable
 set background=dark
 colorscheme solarized
+
+" Enable airline customization
+let g:airline_powerline_fonts=1
 
 " NERDTree customization
 let NERDTreeIgnore = ['\.pyc$']
