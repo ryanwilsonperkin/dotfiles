@@ -1,14 +1,10 @@
-" General configuration
-" =====================
+" General settings
 
 " Force ViM mode (loses backwards compatibility with Vi) 
 set nocompatible
 
 " Syntax highlighting               
 syntax on
-
-" Set 256 bit color mode
-set t_Co=256
 
 " Enhance command-line completion
 set wildmenu
@@ -73,9 +69,6 @@ set scrolloff=3
 " Turn off warning messages switching between buffers
 set hidden
 
-" Search upwards recursively for a tags folder
-set tags=.tags;/
-
 " Don't auto fold on file open
 set foldlevelstart=99
 
@@ -89,28 +82,23 @@ set ttimeoutlen=100
 " Allow mouse support for those rare cases
 set mouse=a
 
-" Set backup directory
+" Directory settings
+
+set tags=.tags;/
 set backupdir=~/.vim/backups
-
-" Set swapfile directory
 set directory=~/.vim/swaps
-
-" Set undo directory
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
 
-" Bundle https://github.com/gmarik/vundle
-" ======================================= 
-filetype off " Required for Vundle
+" Vundle settings
 
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Let Vundle manage itself.
-Plugin 'gmarik/Vundle.vim'
-
 " Plugins
+Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jlanzarotta/bufexplorer'
@@ -127,44 +115,36 @@ Plugin 'nvie/vim-flake8'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
-
-" Colour schemes
 Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on " Required for Vundle
 
-" Set colour scheme
+" Colour settings
+
+set t_Co=256
 set background=dark
 colorscheme solarized
 
-" Enable airline customization
+" Airline settings
+
 let g:airline_powerline_fonts=1
 
-" NERDTree customization
+" NERDTree settings
+
 let NERDTreeIgnore = ['\.pyc$']
-
-" Keymappings
-" ===========
-let mapleader = ";"
-
-" Toggle NERDTree (;n)
 noremap <leader><space> :NERDTreeToggle<CR>
 
-" Toggle code fold ( )
+" Tagbar settings
+
+noremap <leader>t :TagbarToggle<CR>
+
+" Keymapping settings
+
+let mapleader = ";"
 noremap <space> za
-
-" Save a file as root (;W)
-noremap <leader>W :w !sudo tee % > /dev/null<CR>
-
-" Switch between buffers quickly
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
 noremap <leader>q :bp\|bd #<CR>
-
-" Toggle the tagbar
-noremap <leader>t :TagbarToggle<CR>
-
-" Move by visible not literal line
 nnoremap j gj
 nnoremap k gk
