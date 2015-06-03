@@ -139,12 +139,16 @@ noremap <leader><space> :NERDTreeToggle<CR>
 
 noremap <leader>t :TagbarToggle<CR>
 
+" CtrlP settings
+
+nnoremap <leader>o :CtrlP<CR>
+
 " Keymapping settings
 
-let mapleader = ";"
-noremap <space> za
+let mapleader = "\<Space>"
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
 noremap <leader>q :bp\|bd #<CR>
 nnoremap j gj
 nnoremap k gk
+nnoremap <leader>w :w<CR>
