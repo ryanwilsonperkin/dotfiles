@@ -79,7 +79,7 @@ set scrolloff=3
 set hidden
 
 " Search upwards recursively for a tags folder
-set tags=tags;/
+set tags=.tags;/
 
 " Don't auto fold on file open
 set foldlevelstart=99
@@ -104,9 +104,6 @@ set directory=~/.vim/swaps
 if exists("&undodir")
 	set undodir=~/.vim/undo
 endif
-
-" Set tags file as .tags
-set tags=.tags
 
 " Bundle https://github.com/gmarik/vundle
 " ======================================= 
