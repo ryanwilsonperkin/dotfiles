@@ -140,7 +140,6 @@ call vundle#end()
 filetype plugin indent on " Required for Vundle
 
 " Set colour scheme
-syntax enable
 set background=dark
 colorscheme solarized
 
