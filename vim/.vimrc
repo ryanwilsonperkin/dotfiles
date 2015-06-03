@@ -10,11 +10,6 @@ syntax on
 " Set 256 bit color mode
 set t_Co=256
 
-" Use the OS clipboard if not in tmux session
-if "$TMUX" == ""
-	set clipboard+=unnamed
-endif
-
 " Enhance command-line completion
 set wildmenu
 
