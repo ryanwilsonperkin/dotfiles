@@ -133,15 +133,15 @@ let g:airline_powerline_fonts=1
 " NERDTree settings
 
 let NERDTreeIgnore = ['\.pyc$']
-noremap <leader><space> :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 
 " Tagbar settings
 
-noremap <leader>t :TagbarToggle<CR>
+nmap <leader>t :TagbarToggle<CR>
 
 " CtrlP settings
 
-nnoremap <leader>o :CtrlP<CR>
+nmap <leader>o :CtrlP<CR>
 
 " Keymapping settings
 
