@@ -107,15 +107,17 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'groenewege/vim-less'
-Plugin 'tpope/vim-rake'
-Plugin 'mileszs/ack.vim'
-Plugin 'vim-scripts/closetag.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'gregsexton/MatchTag'
+Plugin 'rking/ag.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
 filetype plugin indent on " Required for Vundle
@@ -129,23 +131,36 @@ colorscheme solarized
 " Airline settings
 
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
 
 " NERDTree settings
 
 let NERDTreeIgnore = ['\.pyc$']
-nmap <leader>n :NERDTreeToggle<CR>
 
-" Tagbar settings
+" Syntastic settings
 
-nmap <leader>t :TagbarToggle<CR>
+let g:syntastic_python_flake8_args='--ignore=E501'
+let g:syntastic_javascript_checkers = ['eslint']
+
+" JSX settings
+
+let g:jsx_ext_required = 0
 
 " CtrlP settings
-
-nmap <leader>o :CtrlP<CR>
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+	\ --ignore .git
+	\ --ignore .svn
+	\ --ignore .hg
+	\ --ignore .DS_Store
+	\ --ignore "**/*.pyc"
+	\ -g ""'
 
 " Keymapping settings
 
 let mapleader = "\<Space>"
+nmap <leader><Tab> :NERDTreeToggle<CR>
+nmap <leader>t :TagbarToggle<CR>
+nmap <leader>o :CtrlP<CR>
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
 noremap <leader>q :bp\|bd #<CR>
