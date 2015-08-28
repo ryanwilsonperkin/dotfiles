@@ -1,0 +1,5 @@
+sitestatic/
+migrations/
+build/
+logs/
+*.dist.js
