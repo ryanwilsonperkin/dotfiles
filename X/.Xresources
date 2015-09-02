@@ -1,0 +1,168 @@
+! Fonts
+Xft.dpi:	110
+Xft.antialias:	true
+Xft.rgba:	rgb
+Xft.hinting:	true
+Xft.hintstyle:	hintslight
+
+! URxvt
+URxvt*font: xft:Source Code Pro for Powerline:style=Regular:size=9:antialias=true:hinting=slight
+URxvt*boldFont: xft:Source Code Pro for Powerline:style=Semibold:size=9:antialias=true:hinting=slight
+URxvt.letterSpace: -2
+URxvt*loginShell: true
+URxvt.scrollBar: false
+URxvt.perl-ext-common: default,matcher,clipboard
+URxvt.url-launcher: /usr/bin/google-chrome
+URxvt.matcher.button: 1
+URxvt*externalBorder: 0
+URxvt*internalBorder: 0
+URxvt*borderLess: false
+
+! Colour schemes
+! --------------
+
+! Solarized Dark
+! *background:			#002b36
+! *foreground:			#839496
+! *fadeColor:			#002b36
+! *cursorColor:			#93a1a1
+! *pointerColorBackground:	#586e75
+! *pointerColorForeground:	#93a1a1
+! *color0:			#073642
+! *color1:			#dc322f
+! *color2:			#859900
+! *color3:			#b58900
+! *color4:			#268bd2
+! *color5:			#d33682
+! *color6:			#2aa198
+! *color7:			#eee8d5
+! *color8:			#002b36
+! *color9:			#cb4b16
+! *color10:			#586e75
+! *color11:			#657b83
+! *color12:			#839496
+! *color13:			#6c71c4
+! *color14:			#93a1a1
+! *color15:			#fdf6e3
+
+! Solarized Light
+! *background:              #fdf6e3
+! *foreground:              #657b83
+! *fadeColor:               #fdf6e3
+! *cursorColor:             #586e75
+! *pointerColorBackground:  #93a1a1
+! *pointerColorForeground:  #586e75
+! *color0:                  #eee8d5
+! *color1:                  #dc322f
+! *color2:                  #859900
+! *color3:                  #b58900
+! *color4:                  #268bd2
+! *color5:                  #d33682
+! *color6:                  #2aa198
+! *color7:                  #073642
+! *color8:                  #fdf6e3
+! *color9:                  #cb4b16
+! *color10:                 #93a1a1
+! *color11:                 #839496
+! *color12:                 #657b83
+! *color13:                 #6c71c4
+! *color14:                 #586e75
+! *color15:                 #002b36
+
+! Base16 Tomorrow Dark 256
+#define base00 #1d1f21
+#define base01 #282a2e
+#define base02 #373b41
+#define base03 #969896
+#define base04 #b4b7b4
+#define base05 #c5c8c6
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #cc6666
+#define base09 #de935f
+#define base0A #f0c674
+#define base0B #b5bd68
+#define base0C #8abeb7
+#define base0D #81a2be
+#define base0E #b294bb
+#define base0F #a3685a
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
+
+! Base16 Tomorrow Light 256
+! #define base00 #1d1f21
+! #define base01 #282a2e
+! #define base02 #373b41
+! #define base03 #969896
+! #define base04 #b4b7b4
+! #define base05 #c5c8c6
+! #define base06 #e0e0e0
+! #define base07 #ffffff
+! #define base08 #cc6666
+! #define base09 #de935f
+! #define base0A #f0c674
+! #define base0B #b5bd68
+! #define base0C #8abeb7
+! #define base0D #81a2be
+! #define base0E #b294bb
+! #define base0F #a3685a
+! 
+! *.foreground:   base02
+! *.background:   base07
+! *.cursorColor:  base02
+! 
+! *.color0:       base00
+! *.color1:       base08
+! *.color2:       base0B
+! *.color3:       base0A
+! *.color4:       base0D
+! *.color5:       base0E
+! *.color6:       base0C
+! *.color7:       base05
+! 
+! *.color8:       base03
+! *.color9:       base08
+! *.color10:      base0B
+! *.color11:      base0A
+! *.color12:      base0D
+! *.color13:      base0E
+! *.color14:      base0C
+! *.color15:      base07
+! 
+! ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! ! use 'shell' template to set these if necessary
+! *.color16:      base09
+! *.color17:      base0F
+! *.color18:      base01
+! *.color19:      base02
+! *.color20:      base04
+! *.color21:      base06
