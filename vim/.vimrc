@@ -113,6 +113,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'gregsexton/MatchTag'
@@ -126,10 +127,12 @@ filetype plugin indent on " Required for Vundle
 
 set t_Co=256
 set background=dark
-colorscheme solarized
+let base16colorspace=256
+colorscheme base16-tomorrow
 
 " Airline settings
 
+let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 

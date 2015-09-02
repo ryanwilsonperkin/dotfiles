@@ -1,3 +1,7 @@
+# Base16 Shell
+BASE16_SHELL="$HOME/.iterm2/base16-tomorrow.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.zsh/oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh/custom
