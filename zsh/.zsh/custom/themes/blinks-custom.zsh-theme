@@ -9,5 +9,5 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{%f%k%b%B%F{green}%}]"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-PROMPT='┌─%B%F{green}%}%n%{%B%F{blue}%}@%m %{%b%F{yellow}%}%~ $(git_prompt_info)%{%f%k%b%}
+PROMPT='┌─%B%F{yellow}%}%n%{%B%F{blue}%}@%m %{%b%F{yellow}%}%~ $(git_prompt_info)%{%f%k%b%}
 └─ %{%f%k%b%}'
