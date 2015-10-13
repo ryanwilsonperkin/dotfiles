@@ -120,6 +120,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'gregsexton/MatchTag'
 Plugin 'rking/ag.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on " Required for Vundle
