@@ -15,8 +15,10 @@ DISABLE_CORRECTION="true"
 
 plugins=(git gitfast pip rvm tmux tmuxinator vagrant)
 
-[ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-[ -e $HOME/.rvm ] && source $HOME/.rvm/scripts/rvm 
-
 # Always use vim as our editor
 export EDITOR=vim
+export NVM_DIR=~/.nvm
+export NVM_SCRIPT=/usr/local/opt/nvm/nvm.sh
+
+[ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
+[ -e $HOME/.rvm ] && source $HOME/.rvm/scripts/rvm
