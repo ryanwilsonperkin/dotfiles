@@ -146,6 +146,7 @@ let NERDTreeIgnore = ['\.pyc$']
 
 let g:syntastic_python_flake8_args='--ignore=E501'
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " JSX settings
 
