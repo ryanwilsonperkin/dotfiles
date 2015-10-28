@@ -17,8 +17,13 @@ plugins=(git gitfast pip rvm tmux tmuxinator vagrant)
 
 # Always use vim as our editor
 export EDITOR=vim
-export NVM_DIR=~/.nvm
+
+# Required NVM variables
+export NVM_DIR=$HOME/.nvm
 export NVM_SCRIPT=/usr/local/opt/nvm/nvm.sh
 
+# Required RVM variables
+export RVM_SCRIPT=$HOME/.rvm/scripts/rvm
+
+# Start oh-my-zsh
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
-[ -e $HOME/.rvm ] && source $HOME/.rvm/scripts/rvm
