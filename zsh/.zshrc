@@ -24,6 +24,7 @@ export NVM_SCRIPT=/usr/local/opt/nvm/nvm.sh
 
 # Required RVM variables
 export RVM_SCRIPT=$HOME/.rvm/scripts/rvm
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # Start oh-my-zsh
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
