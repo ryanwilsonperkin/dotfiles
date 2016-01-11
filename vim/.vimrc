@@ -27,6 +27,9 @@ set hlsearch
 " Ignore case of searches
 set ignorecase
 
+" Unless the search contains uppercase
+set smartcase
+
 " Incremental search
 set incsearch
 
