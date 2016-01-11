@@ -86,7 +86,6 @@ set ttimeoutlen=100
 set mouse=a
 
 " Directory settings
-
 set tags=.tags;/
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
@@ -95,7 +94,6 @@ if exists("&undodir")
 endif
 
 " Vundle settings
-
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -130,30 +128,25 @@ call vundle#end()
 filetype plugin indent on " Required for Vundle
 
 " Colour settings
-
 set t_Co=256
 set background=dark
 let base16colorspace=256
 colorscheme base16-tomorrow
 
 " Airline settings
-
 let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 
 " NERDTree settings
-
 let NERDTreeIgnore = ['\.pyc$']
 
 " Syntastic settings
-
 let g:syntastic_python_flake8_args='--ignore=E501'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " JSX settings
-
 let g:jsx_ext_required = 0
 
 " CtrlP settings
@@ -166,7 +159,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 	\ -g ""'
 
 " Keymapping settings
-
 let mapleader = "\<Space>"
 nmap <leader><Tab> :NERDTreeToggle<CR>
 nmap <leader>t :TagbarToggle<CR>
