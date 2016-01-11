@@ -113,7 +113,6 @@ Plugin 'nvie/vim-flake8'
 Plugin 'gregsexton/MatchTag'
 Plugin 'rking/ag.vim'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-surround'
 
 " Display plugins
 Plugin 'bling/vim-airline'
