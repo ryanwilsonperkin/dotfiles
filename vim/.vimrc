@@ -116,7 +116,6 @@ Plugin 'editorconfig/editorconfig-vim'
 
 " Display plugins
 Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'chriskempson/base16-vim'
 
 " Language plugins
