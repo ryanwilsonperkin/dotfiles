@@ -100,7 +100,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Plugins
+" Tool plugins
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
@@ -109,20 +109,24 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
-Plugin 'groenewege/vim-less'
-Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'nvie/vim-flake8'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'elzr/vim-json'
-Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'chriskempson/base16-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'gregsexton/MatchTag'
 Plugin 'rking/ag.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-surround'
+
+" Display plugins
+Plugin 'bling/vim-airline'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
+
+" Language plugins
+Plugin 'groenewege/vim-less'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'elzr/vim-json'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 filetype plugin indent on " Required for Vundle
