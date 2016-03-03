@@ -85,6 +85,9 @@ set ttimeoutlen=100
 " Allow mouse support for those rare cases
 set mouse=a
 
+" Allow editing of crontabs (disable backup)
+autocmd filetype crontab setlocal nobackup nowritebackup
+
 " Directory settings
 set tags=.tags;/
 set backupdir=~/.vim/backups
