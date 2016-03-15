@@ -13,7 +13,7 @@ ZSH_THEME="blinks-custom"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
-plugins=(git gitfast pip rvm tmux tmuxinator vagrant)
+plugins=(git gitfast tmux tmuxinator)
 
 # Always use vim as our editor
 export EDITOR=vim
