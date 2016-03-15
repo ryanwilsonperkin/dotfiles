@@ -110,6 +110,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'nvie/vim-flake8'
 Plugin 'gregsexton/MatchTag'
 Plugin 'rking/ag.vim'
+Plugin 'davidhalter/jedi-vim'
 
 " Display plugins
 Plugin 'vim-airline/vim-airline'
