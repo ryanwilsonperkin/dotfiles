@@ -92,9 +92,7 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 set tags=.tags;/
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-if exists("&undodir")
-	set undodir=~/.vim/undo
-endif
+set undodir=~/.vim/undo
 
 " Vundle settings
 filetype off
