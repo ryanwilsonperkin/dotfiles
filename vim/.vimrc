@@ -103,7 +103,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
-Plugin 'jlanzarotta/bufexplorer'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
@@ -111,7 +110,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'nvie/vim-flake8'
 Plugin 'gregsexton/MatchTag'
 Plugin 'rking/ag.vim'
-Plugin 'editorconfig/editorconfig-vim'
 
 " Display plugins
 Plugin 'vim-airline/vim-airline'
