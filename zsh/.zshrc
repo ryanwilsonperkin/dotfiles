@@ -13,6 +13,9 @@ ZSH_THEME="blinks-custom"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_CORRECTION="true"
 
+# Disable virtualenv prompt (customized in prompt theme)
+VIRTUAL_ENV_DISABLE_PROMPT=1
+
 plugins=(git gitfast tmux tmuxinator)
 
 # Always use vim as our editor
