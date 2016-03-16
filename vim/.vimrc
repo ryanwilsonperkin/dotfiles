@@ -88,6 +88,9 @@ set mouse=a
 " Allow editing of crontabs (disable backup)
 autocmd filetype crontab setlocal nobackup nowritebackup
 
+" Show window split for autocompletion at bottom of screen
+set splitbelow
+
 " Directory settings
 set tags=.tags;/
 set backupdir=~/.vim/backups
