@@ -1,7 +1,5 @@
-function _prompt_char() {
-  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
-    echo "%{%F{blue}%}±%{%f%k%b%} "
-  fi
+function _vcs_info() {
+  echo "%{%F{blue}%}${vcs_info_msg_0_}%{%f%k%b%} "
 }
 
 function _virtualenv_info() {
@@ -15,5 +13,5 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{%f%k%b%B%F{green}%}]"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-PROMPT='┌─%B%F{yellow}%}%n%{%B%F{blue}%}@%m %{%b%F{yellow}%}%~ $(_prompt_char)$(_virtualenv_info)%{%f%k%b%}
+PROMPT='┌─%B%F{yellow}%}%n%{%B%F{blue}%}@%m %{%b%F{yellow}%}%~ $(_vcs_info)$(_virtualenv_info)%{%f%k%b%}
 └─ %{%f%k%b%}'

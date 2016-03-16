@@ -6,6 +6,14 @@ BASE16_SHELL="$HOME/.zsh/custom/scripts/base16-tomorrow.dark.sh"
 ZSH=$HOME/.zsh/oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh/custom
 
+# Enable vcs_info zsh module
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' formats "[%b]"
+precmd() {
+	vcs_info
+}
+
 # Name of the oh-my-zsh theme.
 ZSH_THEME="blinks-custom"
 
