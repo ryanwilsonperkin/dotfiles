@@ -29,5 +29,9 @@ export NVM_SCRIPT=/usr/local/opt/nvm/nvm.sh
 export RVM_SCRIPT=$HOME/.rvm/scripts/rvm
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# virtualenvwrapper features
+export WORKON_HOME=$HOME/.virtualenvs
+export VENV_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+
 # Start oh-my-zsh
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
