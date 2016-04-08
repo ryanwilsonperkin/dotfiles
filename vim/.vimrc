@@ -167,7 +167,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 let mapleader = "\<Space>"
 nmap <leader><Tab> :NERDTreeToggle<CR>
 nmap <leader>t :TagbarToggle<CR>
-nmap <leader>o :CtrlP<CR>
+nmap <leader>o :NERDTreeFind<CR>
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
 noremap <leader>q :bp\|bd #<CR>
