@@ -3,3 +3,4 @@ migrations/
 build/
 logs/
 *.dist.js
+*.js.map
