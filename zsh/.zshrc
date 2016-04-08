@@ -32,6 +32,11 @@ export EDITOR=vim
 # Required NVM variables
 export NVM_DIR=$HOME/.nvm
 export NVM_SCRIPT=/usr/local/opt/nvm/nvm.sh
+function nvm {
+	[ -z "$NVM_ENABLED" ] && source $NVM_SCRIPT;
+	export NVM_ENABLED=1
+	nvm "$@"
+}
 
 # Required RVM variables
 export RVM_SCRIPT=$HOME/.rvm/scripts/rvm
@@ -40,6 +45,11 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # virtualenvwrapper features
 export WORKON_HOME=$HOME/.virtualenvs
 export VENV_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+function workon {
+	[ -z "$VENV_ENABLED" ] && source $VENV_SCRIPT;
+	export VENV_ENABLED=1
+	workon "$@"
+}
 
 # Start oh-my-zsh
 [ -e $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
