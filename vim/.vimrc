@@ -165,6 +165,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 
 " Keymapping settings
 let mapleader = "\<Space>"
+imap jj <Esc>
 nmap <leader><Tab> :NERDTreeToggle<CR>
 nmap <leader>t :TagbarToggle<CR>
 nmap <leader>o :NERDTreeFind<CR>
