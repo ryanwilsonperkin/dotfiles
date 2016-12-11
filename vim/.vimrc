@@ -171,6 +171,7 @@ imap jj <Esc>
 nmap <leader><Tab> :NERDTreeToggle<CR>
 nmap <leader>t :TagbarToggle<CR>
 nmap <leader>o :NERDTreeFind<CR>
+nmap <leader>s :SyntasticToggleMode<CR>
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
 noremap <leader>q :bp\|bd #<CR>
