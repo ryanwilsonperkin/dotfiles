@@ -178,3 +178,4 @@ noremap <leader>q :bp\|bd #<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>w :w<CR>
+nnoremap <leader>/ :Ag<space>
