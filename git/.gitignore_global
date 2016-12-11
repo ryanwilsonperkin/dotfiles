@@ -51,3 +51,4 @@ coffeelint.json
 ################
 venv
 *.pyc
+.eggs
