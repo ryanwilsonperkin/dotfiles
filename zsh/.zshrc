@@ -1,5 +1,5 @@
 # Base16 Shell
-BASE16_SHELL="$HOME/.zsh/custom/scripts/base16-ocean.dark.sh"
+BASE16_SHELL="$HOME/.zsh/custom/scripts/base16-ocean.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # Path to your oh-my-zsh configuration.
