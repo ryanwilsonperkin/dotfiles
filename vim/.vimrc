@@ -111,7 +111,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'nvie/vim-flake8'
-Plugin 'gregsexton/MatchTag'
 Plugin 'rking/ag.vim'
 Plugin 'davidhalter/jedi-vim'
 
