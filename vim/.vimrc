@@ -144,6 +144,9 @@ let g:airline#extensions#tabline#enabled = 1
 " NERDTree settings
 let NERDTreeIgnore = ['\.pyc$']
 
+" NERDCommenter settings
+let g:NERDSpaceDelims = 1
+
 " Syntastic settings
 let g:syntastic_mode_map = { "mode": "passive" }
 let g:syntastic_python_flake8_args='--ignore=E501'
