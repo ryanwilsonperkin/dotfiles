@@ -136,6 +136,11 @@ set background=dark
 let base16colorspace=256
 colorscheme base16-tomorrow
 
+" Neomake settings
+autocmd! BufWritePost * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_python_enabled_makers = ['flake8']
+
 " Airline settings
 let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
