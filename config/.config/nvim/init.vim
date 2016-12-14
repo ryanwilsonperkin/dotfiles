@@ -91,44 +91,38 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 " Show window split for autocompletion at bottom of screen
 set splitbelow
 
-" Directory settings
-set tags=.tags;/
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-set undodir=~/.vim/undo
-
-" Vundle settings
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" vim-plug installations
+call plug#begin()
 
 " Tool plugins
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'majutsushi/tagbar'
-Plugin 'neomake/neomake'
-Plugin 'nvie/vim-flake8'
-Plugin 'rking/ag.vim'
-Plugin 'davidhalter/jedi-vim'
+Plug 'gmarik/Vundle.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
+Plug 'neomake/neomake'
+Plug 'nvie/vim-flake8'
+Plug 'rking/ag.vim'
+Plug 'davidhalter/jedi-vim'
 
 " Display plugins
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'chriskempson/base16-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'chriskempson/base16-vim'
 
 " Language plugins
-Plugin 'groenewege/vim-less'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'elzr/vim-json'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'kchmck/vim-coffee-script'
+Plug 'groenewege/vim-less'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'elzr/vim-json'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'kchmck/vim-coffee-script'
 
-call vundle#end()
-filetype plugin indent on " Required for Vundle
+call plug#end()
+
+" Enable filetype highlighting
+filetype plugin indent on
 
 " Colour settings
 set t_Co=256
