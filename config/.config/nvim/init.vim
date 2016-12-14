@@ -108,8 +108,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
+Plugin 'neomake/neomake'
 Plugin 'nvie/vim-flake8'
 Plugin 'rking/ag.vim'
 Plugin 'davidhalter/jedi-vim'
@@ -146,12 +146,6 @@ let NERDTreeIgnore = ['\.pyc$']
 
 " NERDCommenter settings
 let g:NERDSpaceDelims = 1
-
-" Syntastic settings
-let g:syntastic_mode_map = { "mode": "passive" }
-let g:syntastic_python_flake8_args='--ignore=E501'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " JSX settings
 let g:jsx_ext_required = 0
