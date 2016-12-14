@@ -1,6 +1,7 @@
 # Find a random TODO to fix
 alias fixtodo='vim $(ag -l TODO | gshuf | head -n 1)'
 
+alias vim=nvim
 alias :q="echo This isn\'t vim, asshole"
 alias :wq=:q
 
