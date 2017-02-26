@@ -1,3 +1,4 @@
 .netrwhist
 vim/.vim/.netrwhist
 tmux/.tmux/plugins
+config/.config/nvim/plugged
