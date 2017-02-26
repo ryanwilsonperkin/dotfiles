@@ -132,8 +132,11 @@ colorscheme base16-tomorrow
 
 " Neomake settings
 autocmd! BufWritePost * Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_highlight_columns = 0
+let g:neomake_javascript_enabled_makers = ['eslint_d']
+let g:neomake_jsx_enabled_makers = ['eslint_d']
 let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_python_flake8_maker = { 'args': ['--ignore=E501'] }
 
 " Airline settings
 let g:airline_theme='base16'
