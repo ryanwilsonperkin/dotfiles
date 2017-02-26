@@ -125,10 +125,10 @@ call plug#end()
 filetype plugin indent on
 
 " Colour settings
-set t_Co=256
 set background=dark
 let base16colorspace=256
-colorscheme base16-tomorrow
+colorscheme base16-ocean
+set termguicolors
 
 " Neomake settings
 autocmd! BufWritePost * Neomake
