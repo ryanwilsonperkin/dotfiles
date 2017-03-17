@@ -24,7 +24,7 @@ DISABLE_CORRECTION="true"
 # Disable virtualenv prompt (customized in prompt theme)
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
-plugins=(git gitfast tmux tmuxinator)
+plugins=(git gitfast)
 
 # Always use vim as our editor
 export EDITOR=vim
