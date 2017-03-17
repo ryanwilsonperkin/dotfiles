@@ -115,7 +115,6 @@ Plug 'chriskempson/base16-vim'
 Plug 'groenewege/vim-less'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'elzr/vim-json'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'kchmck/vim-coffee-script'
 
