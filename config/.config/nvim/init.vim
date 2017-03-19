@@ -95,7 +95,6 @@ set splitbelow
 call plug#begin()
 
 " Tool plugins
-Plug 'gmarik/Vundle.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
