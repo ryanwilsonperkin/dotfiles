@@ -91,6 +91,9 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 " Show window split for autocompletion at bottom of screen
 set splitbelow
 
+" Highlight matching closed element
+set showmatch
+
 " vim-plug installations
 call plug#begin()
 
