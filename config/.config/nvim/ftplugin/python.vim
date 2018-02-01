@@ -1,7 +1,9 @@
 setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
-setlocal textwidth=80
+setlocal textwidth=120
+setlocal cc=120
 setlocal smarttab
 setlocal expandtab
+setlocal autoindent
 setlocal foldmethod=indent
