@@ -11,7 +11,7 @@ brew cask install karabiner
 brew cask install keepingyouawake
 brew cask install macdown
 brew cask install spectacle
-brew cask install sublimetext
+brew cask install sublime-text
 brew cask install tunnelblick
 brew cask install vlc
 
