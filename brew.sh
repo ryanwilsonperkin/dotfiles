@@ -3,9 +3,17 @@
 brew tap "caskroom/cask"
 brew tap "neovim/neovim"
 
+brew cask install 1password
+brew cask install alfred
 brew cask install docker
+brew cask install iterm2
 brew cask install karabiner
+brew cask install keepingyouawake
 brew cask install macdown
+brew cask install spectacle
+brew cask install sublimetext
+brew cask install tunnelblick
+brew cask install vlc
 
 brew install ab
 brew install colordiff
