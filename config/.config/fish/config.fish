@@ -1,4 +1,5 @@
 set -Ux EDITOR nvim
+set fish_greeting ""
 
 # Activate base-16 theme
 if status --is-interactive
