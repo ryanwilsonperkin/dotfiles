@@ -27,6 +27,7 @@ brew install imagemagick
 brew install jq
 brew install neovim
 brew install node
+brew install python
 brew install python3
 brew install stow
 brew install the_silver_searcher
