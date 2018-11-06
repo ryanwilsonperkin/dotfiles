@@ -19,9 +19,12 @@ function edit
 end
 
 # Aliases
+alias ag='ag --hidden'
 alias vim='nvim'
+alias myjira='jira ls -a rwilsonperkin'
+alias markdown='open -a Markoff'
 abbr ta 'tmux attach -t'
-abbr ts 'tmux new-session -s'
+abbr tn 'tmux new-session -s'
 abbr tl 'tmux list-sessions'
 abbr g 'git'
 abbr ga 'git add'
