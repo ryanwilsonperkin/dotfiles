@@ -1,8 +1,9 @@
+.git
 node_modules/
 sitestatic/
-migrations/
 build/
 logs/
 *.dist.js
 *.min.js
 *.js.map
+*zxcvbn.js
