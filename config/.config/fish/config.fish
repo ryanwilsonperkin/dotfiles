@@ -4,7 +4,18 @@ set fish_greeting ""
 
 # Activate base-16 theme
 if status --is-interactive
-	eval sh $HOME/.config/base16-shell/scripts/base16-ocean.sh
+	if [ "$ITERM_PROFILE" = "light" ]
+		set BASE16_THEME ocean-light
+	else
+		set BASE16_THEME ocean
+	end
+	eval sh $HOME/.config/base16-shell/scripts/base16-$BASE16_THEME.sh
+end
+set -Ux BAT_THEME "TwoDark"
+
+# Functions
+function edit
+	nvim (ag -l $argv)
 end
 
 # Aliases
