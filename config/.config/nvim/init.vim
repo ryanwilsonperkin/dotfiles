@@ -132,9 +132,13 @@ call plug#end()
 filetype plugin indent on
 
 " Colour settings
-set background=dark
-let base16colorspace=256
-colorscheme base16-tomorrow
+if $ITERM_PROFILE == 'light'
+  colorscheme default
+else
+  set background=dark
+  let base16colorspace=256
+  colorscheme base16-tomorrow
+endif
 
 " Neomake settings
 autocmd! BufWritePost * Neomake
@@ -156,7 +160,11 @@ let g:pymode_lint = 0
 let g:pymode_rope = 0
 
 " Airline settings
-let g:airline_theme='base16'
+if $ITERM_PROFILE == 'light'
+  let g:airline_theme='minimalist'
+else
+  let g:airline_theme='base16'
+endif
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 
