@@ -1,5 +1,5 @@
 set -Ux EDITOR nvim
-set PATH $PATH /usr/local/opt/go/libexec/bin $HOME/go/bin
+set PATH $PATH /usr/local/opt/go/libexec/bin $HOME/go/bin $HOME/bin
 set fish_greeting ""
 
 # Activate base-16 theme
