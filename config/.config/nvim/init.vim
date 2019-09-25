@@ -105,6 +105,7 @@ Plug 'neomake/neomake'
 Plug 'nvie/vim-flake8'
 Plug 'rking/ag.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'prettier/vim-prettier'
 
 " Display plugins
 Plug 'vim-airline/vim-airline'
@@ -121,6 +122,9 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'stephpy/vim-yaml'
 Plug 'python-mode/python-mode'
 Plug 'dag/vim-fish'
+Plug 'cespare/vim-toml'
+Plug 'chrisbra/csv.vim'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
