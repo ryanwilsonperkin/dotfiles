@@ -19,6 +19,7 @@ function edit
 end
 
 # Aliases
+alias wavedev='~/Projects/wave/wave/bin/run'
 alias ag='ag --hidden'
 alias vim='nvim'
 alias myjira='jira ls -a rwilsonperkin'
