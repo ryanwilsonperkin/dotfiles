@@ -5,8 +5,9 @@ BASE16_SHELL="$HOME/.zsh/custom/scripts/base16-ocean.sh"
 # Start custom scripts
 source "$HOME/.zsh/custom/aliases.zsh"
 
-# Setup antigen
-source "$HOME/.zsh/custom/scripts/antigen.zsh"
+# Setup zpug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.zsh/oh-my-zsh
