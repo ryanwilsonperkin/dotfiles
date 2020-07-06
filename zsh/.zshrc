@@ -2,12 +2,12 @@
 BASE16_SHELL="$HOME/.zsh/custom/scripts/base16-ocean.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-# Start custom scripts
-source "$HOME/.zsh/custom/aliases.zsh"
-
 # Setup zpug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
+
+# Local config files
+zplug "~/.zsh/custom", from:local
 
 # Spaceship theme
 zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
