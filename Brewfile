@@ -3,16 +3,16 @@ cask alfred
 cask docker
 cask iterm2
 cask karabiner
-cask keepingyouawake
 cask macdown
-cask spectacle
 cask sublime-text
 cask tunnelblick
 cask vlc
 
-brew ab
+brew ag
+brew bat
 brew colordiff
 brew fish
+brew gh
 brew git
 brew go
 brew htop
@@ -20,12 +20,10 @@ brew httpie
 brew hub
 brew imagemagick
 brew jq
-brew neovim
 brew node
-brew python
-brew python3
+brew nvim
+brew pyenv
 brew stow
-brew the_silver_searcher
 brew tig
 brew tmux
 brew tree
