@@ -1,30 +1,42 @@
-cask 1password
-cask alfred
-cask docker
-cask iterm2
-cask karabiner
-cask macdown
-cask sublime-text
-cask tunnelblick
-cask vlc
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "homebrew/services"
 
-brew ag
-brew bat
-brew colordiff
-brew fish
-brew gh
-brew git
-brew go
-brew htop
-brew httpie
-brew hub
-brew imagemagick
-brew jq
-brew node
-brew nvim
-brew pyenv
-brew stow
-brew tig
-brew tmux
-brew tree
-brew yarn
+# cask "1password"
+# cask "alfred"
+cask "docker"
+cask "firefox"
+# cask "google-chrome"
+# cask "iterm2"
+cask "kap"
+cask "karabiner-elements"
+cask "macdown"
+# cask "sizeup"
+# cask "slack"
+cask "sublime-text"
+cask "transmission"
+cask "tunnelblick"
+# cask "visual-studio-code"
+cask "vlc"
+
+brew "ag"
+brew "bat"
+brew "curl"
+brew "colordiff"
+brew "fish"
+brew "gh"
+brew "git"
+brew "go"
+brew "htop"
+brew "httpie"
+brew "hub"
+brew "imagemagick"
+brew "jq"
+brew "node"
+brew "nvim"
+brew "pyenv"
+brew "stow"
+brew "tig"
+brew "tmux"
+brew "tree"
+brew "yarn"
