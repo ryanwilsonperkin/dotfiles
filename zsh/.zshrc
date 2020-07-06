@@ -9,7 +9,8 @@ source "$HOME/.zsh/custom/aliases.zsh"
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-zplug "$HOME/.zsh/custom/themes", from:local, use:"blinks-custom.zsh-theme"
+# Spaceship theme
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 zplug load
 
