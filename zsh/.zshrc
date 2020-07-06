@@ -9,6 +9,7 @@ source "$HOME/.zsh/custom/aliases.zsh"
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+zplug load
 
 # Always use nvim as our editor
 export EDITOR=nvim
