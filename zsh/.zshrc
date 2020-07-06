@@ -9,12 +9,6 @@ source "$HOME/.zsh/custom/aliases.zsh"
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.zsh/oh-my-zsh
-ZSH_CUSTOM=$HOME/.zsh/custom
-
-# Name of the oh-my-zsh theme.
-ZSH_THEME="blinks-custom"
 
 # Always use nvim as our editor
 export EDITOR=nvim
