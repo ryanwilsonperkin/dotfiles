@@ -15,3 +15,5 @@ zplug load
 
 # Always use nvim as our editor
 export EDITOR=nvim
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
