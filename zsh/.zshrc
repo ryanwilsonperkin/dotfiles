@@ -56,3 +56,6 @@ export PATH=$HOME/bin:${HOME}/.krew/bin:/usr/local/share/chruby:$PATH
 bindkey -e
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+
+# cloudplatform: add Shopify clusters to your local kubernetes config
+export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/ryan/.kube/config:/Users/ryan/.kube/config.shopify.cloudplatform
