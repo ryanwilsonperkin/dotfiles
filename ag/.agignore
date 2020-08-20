@@ -7,3 +7,8 @@ logs/
 *.min.js
 *.js.map
 *zxcvbn.js
+
+# At least for now, I don't care about rbi files
+*.rbi
+# Or casette data
+cassettes/*
