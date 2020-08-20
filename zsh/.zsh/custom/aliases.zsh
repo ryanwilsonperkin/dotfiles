@@ -3,6 +3,7 @@ alias vim=nvim
 alias g=git
 alias gst="git status"
 alias gadd="git add"
+alias gap="git add -p"
 alias gr="git rebase"
 alias gd="git diff"
 alias gb="git branch"
