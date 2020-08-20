@@ -53,3 +53,7 @@ coffeelint.json
 venv
 *.pyc
 .eggs
+
+# Rails #
+#########
+.generators
