@@ -11,8 +11,12 @@ alias gc="git commit --verbose"
 alias gca="git commit --verbose --all"
 alias gc!="gc --amend"
 alias gca!="gca --amend"
+alias ls="ls -G"
 alias ll="ls -l"
 alias la="ls -la"
+alias k=kubectl
+alias s=shopify
+alias zupdate="source ~/.zshrc"
 
 # Functions
 # Lookup information on an IP
