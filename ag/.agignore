@@ -1,6 +1,7 @@
 .git
 node_modules/
 sitestatic/
+staticfiles/
 build/
 logs/
 *.dist.js
