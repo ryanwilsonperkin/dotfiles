@@ -4,3 +4,4 @@ tmux/.tmux/plugins
 config/.config/nvim/plugged
 config/.config/fish/*
 !config/.config/fish/config.fish
+config/.config/iterm2/AppSupport
