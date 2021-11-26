@@ -20,7 +20,6 @@ alias ls="ls -G"
 alias ll="ls -l"
 alias la="ls -la"
 alias k=kubectl
-alias s=shopify
 alias zupdate="source ~/.zshrc"
 alias pdfcat='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=-'
 
