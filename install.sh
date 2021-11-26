@@ -46,4 +46,18 @@ stow --target "${HOME}" tmux
 stow --target "${HOME}" zsh
 
 echo "[Step 3] Configure programs"
+# Configure zplug
 zsh -i -c "zplug check || zplug install"
+
+# Configure git
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global diff-so-fancy.markEmptyLines false
+git config --global core.excludesfile ~/.gitignore_global
+git config --global init.defaultBranch main
+git config --global push.default current
+git config --global pull.rebase false
+git config --global pull.ff only
+git config --global rebase.autoStash true
+git config --global rebase.autosquash true
+git config --global rerere.enabled true
+git config --global clean.requireForce true
