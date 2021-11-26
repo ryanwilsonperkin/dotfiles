@@ -20,11 +20,18 @@ elif is_linux; then
 		sleep 1
 	done
 	sudo xargs -a debian-packages.txt apt-get install -y
-	# Install zplug for linux system
-	export ZPLUG_HOME="/usr/local/opt/zplug"
+
+	# Additional downloads
 	sudo mkdir -p /usr/local/opt
 	sudo chmod a+w /usr/local/opt
+
+	# Install zplug for linux system
+	export ZPLUG_HOME="/usr/local/opt/zplug"
 	git clone https://github.com/zplug/zplug.git /usr/local/opt/zplug
+
+	# Install diff-so-fancy for linux systems
+	git clone https://github.com/so-fancy/diff-so-fancy.git /usr/local/opt/diff-so-fancy
+	sudo ln -s /usr/local/opt/diff-so-fancy/diff-so-fancy /usr/local/bin/diff-so-fancy
 fi
 
 echo "[Step 2] Symlink dotfiles"
