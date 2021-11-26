@@ -12,6 +12,7 @@ is_linux () {
 
 echo "[Step 1] Install programs"
 if is_macos; then
+	./install_homebrew.sh
 	brew bundle
 elif is_linux; then
 	while fuser /var/lib/dpkg/lock > /dev/null 2>&1 ; do
