@@ -39,4 +39,4 @@ stow --target "${HOME}" tmux
 stow --target "${HOME}" zsh
 
 echo "[Step 3] Configure programs"
-zplug install
+zsh -i -c "zplug install"
