@@ -18,6 +18,9 @@ elif is_linux; then
 fi
 
 echo "[Step 2] Symlink dotfiles"
+if test -f ~/.zshrc; then
+	mv ~/.zshrc ~/.zshrc.original
+fi
 stow --target "${HOME}" ag
 stow --target "${HOME}" bash
 stow --target "${HOME}" config
