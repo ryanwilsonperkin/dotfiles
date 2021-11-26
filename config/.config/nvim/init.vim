@@ -104,7 +104,6 @@ Plug 'majutsushi/tagbar'
 Plug 'neomake/neomake'
 Plug 'nvie/vim-flake8'
 Plug 'rking/ag.vim'
-Plug 'davidhalter/jedi-vim'
 Plug 'prettier/vim-prettier'
 
 " Display plugins
@@ -114,14 +113,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'chriskempson/base16-vim'
 
 " Language plugins
-Plug 'groenewege/vim-less'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'cakebaker/scss-syntax.vim'
-Plug 'kchmck/vim-coffee-script'
 Plug 'stephpy/vim-yaml'
-Plug 'python-mode/python-mode'
-Plug 'dag/vim-fish'
 Plug 'cespare/vim-toml'
 Plug 'chrisbra/csv.vim'
 Plug 'leafgarland/typescript-vim'
@@ -146,6 +141,8 @@ let g:neomake_highlight_columns = 0
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_ruby_enabled_makers = []
+
 
 " Python-mode settings
 let g:pymode_indent = 1
