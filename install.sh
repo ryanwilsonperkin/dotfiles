@@ -19,6 +19,11 @@ elif is_linux; then
 		sleep 1
 	done
 	sudo xargs -a debian-packages.txt apt-get install -y
+	# Install zplug for linux system
+	export ZPLUG_HOME="/usr/local/opt/zplug"
+	sudo mkdir -p /usr/local/opt
+	sudo chmod a+w /usr/local/opt
+	git clone https://github.com/zplug/zplug.git /usr/local/opt/zplug
 fi
 
 echo "[Step 2] Symlink dotfiles"
