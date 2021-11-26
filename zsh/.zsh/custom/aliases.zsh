@@ -6,18 +6,23 @@ alias gadd="git add"
 alias gap="git add -p"
 alias gr="git rebase"
 alias gd="git diff"
-alias gb="git branch"
+alias gb="git branch --sort=-committerdate"
 alias gco="git checkout"
+alias gcd="git checkout-default"
 alias gc="git commit --verbose"
 alias gca="git commit --verbose --all"
 alias gc!="gc --amend"
 alias gca!="gca --amend"
+alias gp="git pull"
+alias grb="git rebase"
+alias grbi="git rebase --interactive"
 alias ls="ls -G"
 alias ll="ls -l"
 alias la="ls -la"
 alias k=kubectl
 alias s=shopify
 alias zupdate="source ~/.zshrc"
+alias pdfcat='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=-'
 
 # Functions
 # Lookup information on an IP
