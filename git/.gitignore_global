@@ -57,3 +57,11 @@ venv
 # Rails #
 #########
 .generators
+
+# Ruby #
+########
+.solargraph.yml
+
+# JS #
+######
+node_modules/
