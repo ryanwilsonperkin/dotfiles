@@ -1,0 +1,11 @@
+silversearcher-ag
+colordiff
+curl
+git
+htop
+httpie
+jq
+neovim
+stow
+tig
+zplug
