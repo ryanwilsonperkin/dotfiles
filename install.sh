@@ -36,3 +36,6 @@ stow --target "${HOME}" config
 stow --target "${HOME}" git
 stow --target "${HOME}" tmux
 stow --target "${HOME}" zsh
+
+echo "[Step 3] Configure programs"
+zplug install
