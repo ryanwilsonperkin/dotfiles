@@ -2,6 +2,10 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
+# Lots of history
+export HISTSIZE=1000000000
+export SAVEHIST="${HISTSIZE}"
+
 # Setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
