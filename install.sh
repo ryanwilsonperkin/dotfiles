@@ -15,7 +15,7 @@ if is_macos; then
 	./install_homebrew.sh
 	brew bundle
 elif is_linux; then
-	while fuser /var/lib/dpkg/lock > /dev/null 2>&1 ; do
+	while fuser /var/{lib/{dpkg,apt/lists},cache/apt/archives}/lock > /dev/null 2>&1 ; do
 		echo "Waiting for lock on apt-get to be released"
 		sleep 1
 	done
