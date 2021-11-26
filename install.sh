@@ -14,6 +14,10 @@ echo "[Step 1] Install programs"
 if is_macos; then
 	brew bundle
 elif is_linux; then
+	while fuser /var/lib/dpkg/lock > /dev/null 2>&1 ; do
+		echo "Waiting for lock on apt-get to be released"
+		sleep 1
+	done
 	sudo xargs -a debian-packages.txt apt-get install -y
 fi
 
