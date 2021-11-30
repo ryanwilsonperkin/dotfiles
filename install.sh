@@ -61,3 +61,6 @@ git config --global rebase.autoStash true
 git config --global rebase.autosquash true
 git config --global rerere.enabled true
 git config --global clean.requireForce true
+
+# Configure neovim
+nvim +PlugInstall +qall
