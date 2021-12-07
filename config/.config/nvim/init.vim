@@ -97,14 +97,14 @@ call plug#begin()
 " Tool plugins
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'majutsushi/tagbar'
-Plug 'neomake/neomake'
-Plug 'nvie/vim-flake8'
-Plug 'rking/ag.vim'
-Plug 'prettier/vim-prettier'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 " Display plugins
 Plug 'vim-airline/vim-airline'
@@ -131,38 +131,78 @@ set background=dark
 let base16colorspace=256
 colorscheme base16-tomorrow
 
-" Neomake settings
-autocmd! BufWritePost * Neomake
-let g:neomake_highlight_columns = 0
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_jsx_enabled_makers = ['eslint']
-let g:neomake_python_enabled_makers = ['flake8']
-let g:neomake_ruby_enabled_makers = []
+" LSP settings
+lua << EOF
+require'lspconfig'.sorbet.setup{}
+EOF
 
+set completeopt=menu,menuone,noselect
 
-" Python-mode settings
-let g:pymode_indent = 1
-let g:pymode_folding = 1
-let g:pymode_motion = 1
-let g:pymode_doc = 1
-let g:pymode_doc_bind = 'K'
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
-let g:pymode_breakpoint_cmd = 'import ipdb; ipdb.set_trace()'
-let g:pymode_lint = 0
-let g:pymode_rope = 0
+lua << EOF
+  -- Setup nvim-cmp.
+  local cmp = require'cmp'
+
+  cmp.setup({
+    snippet = {
+      -- REQUIRED - you must specify a snippet engine
+      expand = function(args)
+        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+        -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+        -- require'snippy'.expand_snippet(args.body) -- For `snippy` users.
+      end,
+    },
+    mapping = {
+      ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+      ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+      ['<C-e>'] = cmp.mapping({
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close(),
+      }),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'ultisnips' }, -- For ultisnips users.
+      -- { name = 'snippy' }, -- For snippy users.
+    }, {
+      { name = 'buffer' },
+    })
+  })
+
+  -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
+
+  -- Setup lspconfig.
+  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+  require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
+    capabilities = capabilities
+  }
+EOF
+
 
 " Airline settings
-if $ITERM_PROFILE == 'light'
-  let g:airline_theme='minimalist'
-else
-  let g:airline_theme='base16'
-endif
+let g:airline_theme='base16'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
-
-" Devicons settings
-let g:webdevicons_enable_ctrlp = 1
 
 " NERDTree settings
 let NERDTreeIgnore = ['\.pyc$']
@@ -174,20 +214,10 @@ let g:NERDSpaceDelims = 1
 " JSX settings
 let g:jsx_ext_required = 0
 
-" CtrlP settings
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-	\ --ignore .git
-	\ --ignore .svn
-	\ --ignore .hg
-	\ --ignore .DS_Store
-	\ --ignore "**/*.pyc"
-	\ -g ""'
-
 " Keymapping settings
 let mapleader = "\<Space>"
 imap jj <Esc>
 nmap <leader><Tab> :NERDTreeToggle<CR>
-nmap <leader>t :TagbarToggle<CR>
 nmap <leader>o :NERDTreeFind<CR>
 noremap <leader>h :bp<CR>
 noremap <leader>l :bn<CR>
@@ -198,4 +228,3 @@ noremap <leader>\ :lopen<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>w :w<CR>
-nnoremap <leader>/ :Ag<space>
