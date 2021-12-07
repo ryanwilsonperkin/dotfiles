@@ -127,13 +127,9 @@ call plug#end()
 filetype plugin indent on
 
 " Colour settings
-if $ITERM_PROFILE == 'light'
-  colorscheme default
-else
-  set background=dark
-  let base16colorspace=256
-  colorscheme base16-tomorrow
-endif
+set background=dark
+let base16colorspace=256
+colorscheme base16-tomorrow
 
 " Neomake settings
 autocmd! BufWritePost * Neomake
