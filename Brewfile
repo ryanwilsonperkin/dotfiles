@@ -17,6 +17,7 @@ cask "visual-studio-code"
 cask "vlc"
 
 brew "ag"
+brew "ripgrep"
 brew "bat"
 brew "colordiff"
 brew "curl"
