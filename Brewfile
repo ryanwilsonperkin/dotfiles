@@ -18,6 +18,7 @@ cask "vlc"
 
 brew "ag"
 brew "ripgrep"
+brew "fd"
 brew "bat"
 brew "colordiff"
 brew "curl"

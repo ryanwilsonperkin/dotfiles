@@ -1,5 +1,6 @@
 silversearcher-ag
 ripgrep
+fd-find
 colordiff
 curl
 git
