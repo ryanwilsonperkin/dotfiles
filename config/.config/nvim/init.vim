@@ -105,6 +105,8 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Display plugins
 Plug 'vim-airline/vim-airline'
@@ -134,13 +136,14 @@ colorscheme base16-tomorrow
 set completeopt=menu,menuone,noselect
 
 lua << EOF
-  -- Setup nvim-cmp.
   local cmp = require'cmp'
   local lsp = require'lspconfig'
 
+  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+
+  -- Setup lsp config
   local on_attach = function(client, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
     -- Enable completion triggered by <c-x><c-o>
     buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -166,6 +169,20 @@ lua << EOF
     -- buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   end
 
+  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+  lsp.solargraph.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+  }
+  lsp.sorbet.setup {
+    cmd = {"srb", "tc", "--lsp", "--enable-all-experimental-lsp-features", "--disable-watchman"},
+    root_dir = lsp.util.root_pattern("sorbet/"),
+    on_attach = on_attach,
+    capabilities = capabilities,
+    init_options = {documentFormatting = false, codeAction = true}
+  }
+
+  -- Setup nvim-cmp.
   cmp.setup({
     snippet = {
       -- REQUIRED - you must specify a snippet engine
@@ -213,20 +230,6 @@ lua << EOF
       { name = 'cmdline' }
     })
   })
-
-  -- Setup lspconfig.
-  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-  lsp.solargraph.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-  }
-  lsp.sorbet.setup {
-    cmd = {"srb", "tc", "--lsp", "--enable-all-experimental-lsp-features", "--disable-watchman"},
-    root_dir = lsp.util.root_pattern("sorbet/"),
-    on_attach = on_attach,
-    capabilities = capabilities,
-    init_options = {documentFormatting = false, codeAction = true}
-  }
 EOF
 
 
@@ -259,3 +262,8 @@ noremap <leader>\ :lopen<CR>
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>w :w<CR>
+nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>/ <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
