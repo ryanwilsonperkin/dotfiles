@@ -107,6 +107,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Display plugins
 Plug 'vim-airline/vim-airline'
@@ -138,6 +139,7 @@ set completeopt=menu,menuone,noselect
 lua << EOF
   local cmp = require'cmp'
   local lsp = require'lspconfig'
+  local treesitter = require'nvim-treesitter.configs'
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -180,6 +182,21 @@ lua << EOF
     on_attach = on_attach,
     capabilities = capabilities,
     init_options = {documentFormatting = false, codeAction = true}
+  }
+
+  -- Setup treesitter
+  treesitter.setup {
+    ensure_installed = {                -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+      "bash", "dockerfile", "go",
+      "graphql", "html", "javascript",
+      "ruby", "yaml"
+    },
+    sync_install = false,               -- install languages synchronously (only applied to `ensure_installed`)
+    ignore_install = {},                -- List of parsers to ignore installing
+    highlight = {
+      enable = true,                    -- false will disable the whole extension
+      disable = {},                     -- list of language that will be disabled
+    },
   }
 
   -- Setup nvim-cmp.
