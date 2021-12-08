@@ -123,6 +123,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
 Plug 'chrisbra/csv.vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'Shopify/vim-sorbet'
 
 call plug#end()
 
