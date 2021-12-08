@@ -19,6 +19,7 @@ elif is_linux; then
 		echo "Waiting for lock on apt-get to be released"
 		sleep 1
 	done
+	sudo add-apt-repository -y ppa:neovim-ppa/stable
 	sudo apt-get update
 	sudo xargs -a debian-packages.txt apt-get install -y
 
