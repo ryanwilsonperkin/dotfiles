@@ -123,7 +123,6 @@ Plug 'stephpy/vim-yaml'
 Plug 'cespare/vim-toml'
 Plug 'chrisbra/csv.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'Shopify/vim-sorbet'
 
 call plug#end()
 
@@ -171,19 +170,6 @@ lua << EOF
     -- buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
     -- buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   end
-
-  local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-  lsp.solargraph.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-  }
-  lsp.sorbet.setup {
-    cmd = {"srb", "tc", "--lsp", "--enable-all-experimental-lsp-features", "--disable-watchman"},
-    root_dir = lsp.util.root_pattern("sorbet/"),
-    on_attach = on_attach,
-    capabilities = capabilities,
-    init_options = {documentFormatting = false, codeAction = true}
-  }
 
   -- Setup treesitter
   treesitter.setup {
