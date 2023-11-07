@@ -15,14 +15,6 @@ if is_macos; then
 	./homebrew_install.sh
 	brew bundle
 elif is_linux; then
-	while fuser /var/{lib/{dpkg,apt/lists},cache/apt/archives}/lock > /dev/null 2>&1 ; do
-		echo "Waiting for lock on apt-get to be released"
-		sleep 1
-	done
-	sudo add-apt-repository -y ppa:neovim-ppa/stable
-	sudo apt-get update
-	sudo xargs -a debian-packages.txt apt-get install -y
-
 	# Additional downloads
 	sudo mkdir -p /usr/local/opt
 	sudo chmod a+w /usr/local/opt
@@ -50,6 +42,9 @@ stow --target "${HOME}" zsh
 echo "[Step 3] Configure programs"
 # Configure zplug
 zsh -i -c "zplug check || zplug install"
+#
+# Configure neovim
+nvim +PlugInstall +qall
 
 # Configure git
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
@@ -63,6 +58,3 @@ git config --global rebase.autoStash true
 git config --global rebase.autosquash true
 git config --global rerere.enabled true
 git config --global clean.requireForce true
-
-# Configure neovim
-nvim +PlugInstall +qall
