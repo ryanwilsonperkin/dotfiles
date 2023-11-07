@@ -1,0 +1,13 @@
+- silversearcher-ag
+- ripgrep
+- fd-find
+- colordiff
+- curl
+- git
+- htop
+- httpie
+- jq
+- neovim
+- stow
+- tig
+- zplug
