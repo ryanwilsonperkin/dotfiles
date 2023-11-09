@@ -9,6 +9,9 @@ is_macos () {
 is_linux () {
 	[ "$(uname)" = "Linux" ]
 }
+is_spin () {
+	[ "$SPIN" = "1" ]
+}
 
 echo "[Step 1] Install programs"
 if is_macos; then
@@ -26,6 +29,10 @@ elif is_linux; then
 	# Install diff-so-fancy for linux systems
 	git clone https://github.com/so-fancy/diff-so-fancy.git /usr/local/opt/diff-so-fancy
 	sudo ln -s /usr/local/opt/diff-so-fancy/diff-so-fancy /usr/local/bin/diff-so-fancy
+fi
+
+if is_spin; then
+	sudo hostnamectl set-hostname $(cat /etc/spin/machine/instance-name)
 fi
 
 echo "[Step 2] Symlink dotfiles"
