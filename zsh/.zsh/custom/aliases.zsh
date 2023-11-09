@@ -42,3 +42,6 @@ alias ta='tmux attach -t'
 alias tl='tmux list-sessions'
 
 alias s="noti sleep"
+
+# Shopify
+alias which-spin="cat /etc/spin/machine/instance-name"
