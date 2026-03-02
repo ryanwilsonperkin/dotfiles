@@ -46,9 +46,10 @@ export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/ryan/.kube/config:/Users/rya
 
 [[ -x /opt/homebrew/bin/try ]] && eval "$(try init ~/src/tries)"
 
-export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/ryan/.kube/config:/Users/ryan/.kube/config.shopify.cloudplatform
-for file in /Users/ryan/src/github.com/Shopify/cloudplatform/workflow-utils/*.bash; do source ${file}; done
-kubectl-short-aliases
+if [[ -d /Users/ryan/src/github.com/Shopify/cloudplatform/workflow-utils/ ]]; then
+	for file in /Users/ryan/src/github.com/Shopify/cloudplatform/workflow-utils/*.bash; do source ${file}; done
+	kubectl-short-aliases
+fi
 
 # Added by tec agent
 [[ -x /Users/ryan/.local/state/tec/profiles/base/current/global/init ]] && eval "$(/Users/ryan/.local/state/tec/profiles/base/current/global/init zsh)"
