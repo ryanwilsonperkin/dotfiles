@@ -19,6 +19,7 @@ alias grb="git rebase"
 alias grbi="git rebase --interactive"
 alias grc="git rebase --continue"
 alias grr="git rm -r"
+alias gw="git worktree"
 alias ls="ls -G"
 alias ll="ls -l"
 alias la="ls -la"
@@ -26,6 +27,11 @@ alias k=kubectl
 alias zupdate="source ~/.zshrc"
 alias pdfcat='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=-'
 alias ag='ag --hidden'
+alias n="noti"
+
+function gmb() {git merge-base origin/main HEAD}
+function gdm() {git diff $(gmb) $@}
+function glm() {git log --pretty=oneline $@ $(gmb)..}
 
 # Functions
 # Lookup information on an IP
@@ -34,7 +40,14 @@ function ipinfo() { curl "ipinfo.io/$1" }
 function edit() { vim $(ag -l $@) }
 # Edit files that match in VS Code
 function vsedit() { code $(ag -l $@) }
-function ci() { open "https://buildkite.com/shopify/${1:-web-ci-builder}/builds?branch=$(git rev-parse --abbrev-ref HEAD)" }
+function cedit() { cursor $(ag -l $@) }
+function ci() { open "https://buildkite.com/shopify/${1:-world-web-ci-builder}/builds?branch=$(git rev-parse --abbrev-ref HEAD)" }
+function take() { mkdir "$1" && cd "$1" }
+
+function keepgoing() { while output=$("$@") && [ -n "$output" ]; do echo "$output"; done }
+
+# Notify phone
+function ntfy() { curl -d "$*" "https://ntfy.sh/$NTFY_TOPIC" }
 
 # Tmux
 alias tn='tmux new-session -s'

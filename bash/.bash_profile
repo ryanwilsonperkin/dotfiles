@@ -16,3 +16,7 @@ command -v liquidprompt > /dev/null 2>&1 && . liquidprompt
 # Remove beer emoticon from brew
 export HOMEBREW_NO_EMOJI=1
 
+if [[ -f /opt/dev/dev.sh ]]; then source /opt/dev/dev.sh; fi
+
+# Added by tec agent
+[[ -x /Users/ryan/.local/state/tec/profiles/base/current/global/init ]] && eval "$(/Users/ryan/.local/state/tec/profiles/base/current/global/init bash)"

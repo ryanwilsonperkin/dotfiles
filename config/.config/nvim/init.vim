@@ -131,7 +131,7 @@ filetype plugin indent on
 " Colour settings
 set background=dark
 let base16colorspace=256
-colorscheme base16-tomorrow
+colorscheme base16-ocean
 
 set completeopt=menu,menuone,noselect
 
