@@ -1,13 +1,11 @@
 # Setup homebrew
-[[ -x /usr/local/bin/brew ]] && eval $(/usr/local/bin/brew shellenv)
-[[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
 
 # Setup zplug
 export ZPLUG_HOME=$HOMEBREW_PREFIX/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # Lots of history
-export HISTSIZE=1000000000
+export HISTSIZE=100000
 export SAVEHIST="${HISTSIZE}"
 
 # Setup fzf
@@ -39,18 +37,9 @@ bindkey -e
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
-# cloudplatform: add Shopify clusters to your local kubernetes config
-export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/ryan/.kube/config:/Users/ryan/.kube/config.shopify.cloudplatform
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
 
-
-[[ -x /opt/homebrew/bin/try ]] && eval "$(try init ~/src/tries)"
-
-if [[ -d /Users/ryan/src/github.com/Shopify/cloudplatform/workflow-utils/ ]]; then
-	for file in /Users/ryan/src/github.com/Shopify/cloudplatform/workflow-utils/*.bash; do source ${file}; done
-	kubectl-short-aliases
-fi
 
 # Added by tec agent
 [[ -x /Users/ryan/.local/state/tec/profiles/base/current/global/init ]] && eval "$(/Users/ryan/.local/state/tec/profiles/base/current/global/init zsh)"
