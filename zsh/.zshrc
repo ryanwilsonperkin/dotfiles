@@ -32,6 +32,9 @@ export EDITOR=nvim
 # Include our own executables in the path
 export PATH=$HOME/bin:${HOME}/.krew/bin:/usr/local/share/chruby:$PATH
 
+# Setup kubeconfig
+export KUBECONFIG=${HOME}/.kube/config:${HOME}/.kube/config.shopify.cloudplatform
+
 # Use emacs style line jumping in zsh
 bindkey -e
 
