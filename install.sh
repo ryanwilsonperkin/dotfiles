@@ -1,39 +1,10 @@
 #!/bin/sh
 
-# Install script for setting up dotfiles
-# Tested for MacOS and Debian-based distros
-
-is_macos () {
-	[ "$(uname)" = "Darwin" ]
-}
-is_linux () {
-	[ "$(uname)" = "Linux" ]
-}
-is_spin () {
-	[ "$SPIN" = "1" ]
-}
+# Install script for setting up dotfiles on macOS
 
 echo "[Step 1] Install programs"
-if is_macos; then
-	./homebrew_install.sh
-	brew bundle
-elif is_linux; then
-	# Additional downloads
-	sudo mkdir -p /usr/local/opt
-	sudo chmod a+w /usr/local/opt
-
-	# Install zplug for linux system
-	export ZPLUG_HOME="/usr/local/opt/zplug"
-	git clone https://github.com/zplug/zplug.git /usr/local/opt/zplug
-
-	# Install diff-so-fancy for linux systems
-	git clone https://github.com/so-fancy/diff-so-fancy.git /usr/local/opt/diff-so-fancy
-	sudo ln -s /usr/local/opt/diff-so-fancy/diff-so-fancy /usr/local/bin/diff-so-fancy
-fi
-
-if is_spin; then
-	sudo hostnamectl set-hostname $(cat /etc/spin/machine/instance-name)
-fi
+./homebrew_install.sh
+brew bundle
 
 echo "[Step 2] Symlink dotfiles"
 if test -f ~/.zshrc; then
