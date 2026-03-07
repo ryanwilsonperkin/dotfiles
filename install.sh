@@ -3,7 +3,9 @@
 # Install script for setting up dotfiles on macOS
 
 echo "[Step 1] Install programs"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! command -v brew >/dev/null 2>&1; then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 brew bundle
 
 echo "[Step 2] Symlink dotfiles"
