@@ -17,10 +17,4 @@ export EDITOR=nvim
 # Use emacs style line jumping in zsh
 bindkey -e
 
-[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
-[[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
-
-
-# Added by tec agent
-[[ -x /Users/ryan/.local/state/tec/profiles/base/current/global/init ]] && eval "$(/Users/ryan/.local/state/tec/profiles/base/current/global/init zsh)"
