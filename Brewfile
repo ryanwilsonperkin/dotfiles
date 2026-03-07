@@ -1,6 +1,7 @@
 
 tap "oven-sh/bun"
 tap "shopify/shopify"
+tap "tobi/try", "https://github.com/tobi/try"
 
 cask "1password"
 cask "firefox"
@@ -58,7 +59,7 @@ brew "telnet"
 brew "tig"
 brew "tmux"
 brew "tree"
-brew "tobi/try/try"
+brew "try"
 brew "uv"
 brew "watch"
 brew "wget"
