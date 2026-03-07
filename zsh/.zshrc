@@ -1,10 +1,7 @@
 # Plugins via Homebrew
 fpath+=("$HOMEBREW_PREFIX/share/zsh/site-functions")
-# compinit initializes the completion system but is slow (~300ms) because
-# it scans all completion files and rebuilds the dump. To speed up shell
-# startup, we only run the full compinit once every 24 hours. On subsequent
-# launches we use compinit -C which skips the scan and loads the cached
-# dump file (~/.zcompdump) directly.
+# compinit is slow because it scans all completion files. Only run the
+# full scan once every 24 hours; otherwise use the cached dump directly.
 autoload -Uz compinit
 if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
   compinit
