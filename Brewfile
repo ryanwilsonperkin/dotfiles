@@ -1,5 +1,6 @@
 
 tap "oven-sh/bun"
+tap "shopify/shopify"
 
 cask "1password"
 cask "firefox"
@@ -26,7 +27,7 @@ brew "cowsay"
 brew "csvkit"
 brew "curl"
 brew "diff-so-fancy"
-brew "shopify/shopify/ejson"
+brew "ejson"
 brew "eza"
 brew "fd"
 brew "fzf"
