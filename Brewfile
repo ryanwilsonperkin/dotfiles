@@ -1,5 +1,5 @@
 tap "shopify/shopify"
-tap "tobi/try", "https://github.com/tobi/try"
+
 
 cask "1password"
 cask "firefox"
@@ -57,7 +57,7 @@ brew "telnet"
 brew "tig"
 brew "tmux"
 brew "tree"
-brew "try"
+brew "tobi/try/try"
 brew "uv"
 brew "watch"
 brew "wget"
