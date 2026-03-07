@@ -10,7 +10,6 @@ echo "[Step 2] Symlink dotfiles"
 if test -f ~/.zshrc; then
 	mv ~/.zshrc ~/.zshrc.original
 fi
-stow --target "${HOME}" ag
 stow --target "${HOME}" config
 stow --target "${HOME}" git
 stow --target "${HOME}" tmux
