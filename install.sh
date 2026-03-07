@@ -11,7 +11,6 @@ if test -f ~/.zshrc; then
 	mv ~/.zshrc ~/.zshrc.original
 fi
 stow --target "${HOME}" ag
-stow --target "${HOME}" bash
 stow --target "${HOME}" config
 stow --target "${HOME}" git
 stow --target "${HOME}" tmux
