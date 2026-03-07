@@ -1,4 +1,3 @@
-tap "oven-sh/bun"
 tap "tobi/try", "https://github.com/tobi/try"
 
 cask "1password"
