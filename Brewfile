@@ -1,4 +1,5 @@
 
+tap "oven-sh/bun"
 
 cask "1password"
 cask "firefox"
@@ -19,7 +20,7 @@ cask "vlc"
 brew "ast-grep"
 brew "bat"
 brew "btop"
-brew "oven-sh/bun/bun"
+brew "bun"
 brew "colordiff"
 brew "cowsay"
 brew "csvkit"
