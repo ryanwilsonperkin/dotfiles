@@ -1,6 +1,3 @@
-tap "homebrew/core"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "oven-sh/bun"
 tap "tobi/try", "https://github.com/tobi/try"
 
