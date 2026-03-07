@@ -14,9 +14,6 @@ source "$HOMEBREW_PREFIX/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh"
 # Always use nvim as our editor
 export EDITOR=nvim
 
-# Include our own executables in the path
-export PATH=$HOME/bin:${HOME}/.krew/bin:/usr/local/share/chruby:$PATH
-
 # Setup kubeconfig
 export KUBECONFIG=${HOME}/.kube/config:${HOME}/.kube/config.shopify.cloudplatform
 
