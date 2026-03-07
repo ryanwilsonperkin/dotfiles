@@ -7,6 +7,7 @@ echo "[Step 1] Install programs"
 if ! command -v brew >/dev/null 2>&1; then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+brew update
 brew bundle
 
 echo "[Step 2] Symlink dotfiles"
