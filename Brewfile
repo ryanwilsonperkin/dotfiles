@@ -1,3 +1,4 @@
+tap "shopify/shopify"
 tap "tobi/try", "https://github.com/tobi/try"
 
 cask "1password"
