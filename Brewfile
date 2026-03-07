@@ -5,6 +5,7 @@ tap "tobi/try", "https://github.com/tobi/try"
 
 cask "1password"
 cask "firefox"
+cask "font-sauce-code-pro-nerd-font"
 cask "google-chrome"
 cask "jordanbaird-ice"
 cask "iterm2"
