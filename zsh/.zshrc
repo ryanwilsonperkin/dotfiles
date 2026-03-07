@@ -1,7 +1,3 @@
-# Lots of history
-export HISTSIZE=100000
-export SAVEHIST="${HISTSIZE}"
-
 # Plugins via Homebrew
 fpath+=("$HOMEBREW_PREFIX/share/zsh/site-functions")
 autoload -Uz compinit && compinit
