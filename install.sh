@@ -16,8 +16,5 @@ stow --target "${HOME}" tmux
 stow --target "${HOME}" zsh
 
 echo "[Step 3] Configure programs"
-# Configure zplug
-zsh -i -c "zplug check || zplug install"
-#
 # Configure neovim
 nvim +PlugInstall +qall

@@ -1,30 +1,19 @@
-# Setup homebrew
-
-# Setup zplug
-export ZPLUG_HOME=$HOMEBREW_PREFIX/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
 # Lots of history
 export HISTSIZE=100000
 export SAVEHIST="${HISTSIZE}"
 
-# Setup fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Plugins via Homebrew
+fpath+=("$HOMEBREW_PREFIX/share/zsh/site-functions")
+autoload -Uz compinit && compinit
 
 # Local config files
-zplug "~/.zsh/custom", from:local
+source ~/.zsh/custom/*.zsh
+autoload -Uz promptinit && promptinit && prompt pure
 
-zplug "rupa/z", use:"z.sh"
-zplug "chriskempson/base16-shell", use:"scripts/base16-ocean.sh"
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "plugins/kubectl", from:oh-my-zsh, defer:2
-zplug "bonnefoa/kubectl-fzf", defer:3
-zplug "Aloxaf/fzf-tab", defer:3
-
-zplug load
+source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOMEBREW_PREFIX/etc/profile.d/z.sh"
+source "$HOMEBREW_PREFIX/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh"
 
 # Always use nvim as our editor
 export EDITOR=nvim
