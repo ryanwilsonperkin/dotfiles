@@ -16,5 +16,3 @@ export EDITOR=nvim
 
 # Use emacs style line jumping in zsh
 bindkey -e
-
-
