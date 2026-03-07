@@ -40,6 +40,11 @@ bindkey -e
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 
+if [ -z "${TRY_LOADED}" ] && command -v -- "try" >/dev/null 2>&1 ; then
+	export TRY_LOADED=1
+	eval "$(try init)"
+fi
+
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
 
