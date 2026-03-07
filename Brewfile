@@ -1,4 +1,3 @@
-tap "shopify/shopify"
 
 
 cask "1password"
@@ -26,7 +25,7 @@ brew "cowsay"
 brew "csvkit"
 brew "curl"
 brew "diff-so-fancy"
-brew "ejson"
+brew "shopify/shopify/ejson"
 brew "eza"
 brew "fd"
 brew "fzf"
