@@ -1,4 +1,5 @@
 #!/bin/sh
+set -euo pipefail
 
 # Install script for setting up dotfiles on macOS
 
