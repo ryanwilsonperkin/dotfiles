@@ -1,0 +1,34 @@
+[user]
+	name = Ryan Wilson-Perkin
+	email = ryanwilsonperkin@gmail.com
+
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = ~/.gitignore_global
+
+[init]
+	defaultBranch = main
+
+[push]
+	default = current
+	autoSetupRemote = true
+
+[pull]
+	rebase = false
+	ff = only
+
+[rebase]
+	autoStash = true
+	autosquash = true
+
+[rerere]
+	enabled = true
+
+[clean]
+	requireForce = true
+
+[diff-so-fancy]
+	markEmptyLines = false
+
+[alias]
+	cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master' | xargs git branch -d"
