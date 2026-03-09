@@ -6,12 +6,11 @@ alias la="ls -la"
 alias k=kubectl
 alias zupdate="source ~/.zshrc"
 alias n="noti"
+alias s="noti sleep"
 
 # Functions
-# Edit files that match
-function edit() { vim $(ag -l $@) }
-# Edit files that match in VS Code
-function vsedit() { code $(ag -l $@) }
+function edit() { $EDITOR $(rg -l $@) }
+function vedit() { $VISUAL $(rg -l $@) }
 function take() { mkdir "$1" && cd "$1" }
 
 # Notify phone
@@ -21,5 +20,3 @@ function ntfy() { curl -d "$*" "https://ntfy.sh/$NTFY_TOPIC" }
 alias tn='tmux new-session -s'
 alias ta='tmux attach -t'
 alias tl='tmux list-sessions'
-
-alias s="noti sleep"
