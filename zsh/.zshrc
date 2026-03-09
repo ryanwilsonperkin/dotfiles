@@ -10,7 +10,9 @@ else
 fi
 
 # Local config files
-source ~/.zsh/custom/*.zsh
+for file in ~/.zsh/custom/*.zsh; do
+	source $file
+done
 autoload -Uz promptinit && promptinit && prompt pure
 
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
