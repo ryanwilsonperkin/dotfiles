@@ -18,8 +18,8 @@ source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.z
 source "$HOMEBREW_PREFIX/etc/profile.d/z.sh"
 source "$HOMEBREW_PREFIX/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh"
 
-# Always use nvim as our editor
 export EDITOR=nvim
+export VISUAL=code
 
 # Use emacs style line jumping in zsh
 bindkey -e
