@@ -5,22 +5,14 @@ alias ll="ls -l"
 alias la="ls -la"
 alias k=kubectl
 alias zupdate="source ~/.zshrc"
-alias pdfcat='gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=-'
-alias ag='ag --hidden'
 alias n="noti"
 
 # Functions
-# Lookup information on an IP
-function ipinfo() { curl "ipinfo.io/$1" }
 # Edit files that match
 function edit() { vim $(ag -l $@) }
 # Edit files that match in VS Code
 function vsedit() { code $(ag -l $@) }
-function cedit() { cursor $(ag -l $@) }
-function ci() { open "https://buildkite.com/shopify/${1:-world-web-ci-builder}/builds?branch=$(git rev-parse --abbrev-ref HEAD)" }
 function take() { mkdir "$1" && cd "$1" }
-
-function keepgoing() { while output=$("$@") && [ -n "$output" ]; do echo "$output"; done }
 
 # Notify phone
 function ntfy() { curl -d "$*" "https://ntfy.sh/$NTFY_TOPIC" }
@@ -31,6 +23,3 @@ alias ta='tmux attach -t'
 alias tl='tmux list-sessions'
 
 alias s="noti sleep"
-
-# Shopify
-alias which-spin="cat /etc/spin/machine/instance-name"
