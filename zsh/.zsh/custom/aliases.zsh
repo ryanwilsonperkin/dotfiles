@@ -7,6 +7,7 @@ alias k=kubectl
 alias zupdate="source ~/.zshrc"
 alias n="noti"
 alias s="noti sleep"
+alias π=pi
 
 # Functions
 function edit() { $EDITOR $(rg -l $@) }
