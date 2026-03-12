@@ -25,3 +25,8 @@ export VISUAL=code
 
 # Use emacs style line jumping in zsh
 bindkey -e
+
+# Manually ignoring, tec attempts to bring it back if the command is not found, but it can be commented
+# This is already loaded by tec agent in custom/
+# Added by tec agent
+# [[ -x /Users/ryan/.local/state/tec/profiles/base/current/global/init ]] && eval "$(/Users/ryan/.local/state/tec/profiles/base/current/global/init zsh)"
