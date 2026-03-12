@@ -3,7 +3,7 @@
 	email = ryanwilsonperkin@gmail.com
 
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
 	excludesfile = ~/.gitignore_global
 	editor = nvim
 
@@ -28,8 +28,12 @@
 [clean]
 	requireForce = true
 
-[diff-so-fancy]
-	markEmptyLines = false
-
 [alias]
 	cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master' | xargs git branch -d"
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true  # use n and N to move between diff sections
+	syntax-theme = base16
