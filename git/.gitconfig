@@ -37,3 +37,7 @@
 [delta]
 	navigate = true  # use n and N to move between diff sections
 	syntax-theme = base16
+[include]
+	path = /Users/ryan/.config/dev/gitconfig
+[maintenance]
+	repo = /Users/ryan/world/git
